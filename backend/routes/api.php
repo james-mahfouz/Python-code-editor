@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CompileController;
 
 Route::group(['prefix' => 'v1'], function(){
     Route::group(['prefix' => 'auth'], function () {
@@ -14,4 +15,6 @@ Route::group(['prefix' => 'v1'], function(){
     Route::group(['middleware' => 'auth:api'], function(){
         Route::post('/logout', [AuthController::class, "logout"]);
     });
+
+    Route::post('/compile', [CompileController::class, "compile"]);
 });
