@@ -18,8 +18,9 @@ Route::group(['prefix' => 'v1'], function(){
         Route::post('/logout', [AuthController::class, "logout"]);
         Route::get('/get_developers', [UserController::class, "get_developers"]);
         Route::post('/save_code', [UserController::class, "save_code"]);
+
+
         Route::get('/codes/{user_id}',[UserController::class, "get_code"]);
-        Route::get('/get_all_users', [AdminController::class, "get_all_users"]);
     });
 
     Route::post('/compile', [CompileController::class, "compile"]);
