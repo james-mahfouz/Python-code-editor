@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Auth;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -10,8 +11,8 @@ class AdminController extends Controller
     {
         $user = Auth::user();
 
-        if($user->is_admin=1){
-            $users = User::select('id', 'name')->where('id', '!=', $user->id)->get();
+        if($user->is_admin==1){
+            $users = User::select()->where('id', '!=', $user->id)->get();
             return response()->json([
                 'users' => $users
             ]);
