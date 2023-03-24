@@ -4,10 +4,15 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 
-Route::controller(AuthController::class)->group(function () {
-    Route::post('login', 'login');
-    Route::post('register', 'register');
-    Route::post('logout', 'logout');
-    Route::post('refresh', 'refresh');
+Route::group(['prefix' => 'v1'], function(){
+    Route::group(['prefix' => 'auth'], function () {
+        Route::post('/login', [AuthController::class, "login"]);
+        Route::post('/signup', [AuthController::class, "register"]);
+        Route::post('/refresh', [AuthController::class, "refresh"]);
 
+    });
+        
+    Route::group(['middleware' => 'auth:api'], function(){
+        Route::post('/logout', [AuthController::class, "logout"]);
+    });
 });
