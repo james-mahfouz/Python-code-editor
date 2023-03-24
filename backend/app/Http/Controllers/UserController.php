@@ -14,7 +14,7 @@ class UserController extends Controller
 {
 
 
-    public function saveCode(Request $request)
+    public function save_code(Request $request)
     {
         $user = Auth::user();
 
@@ -29,7 +29,7 @@ class UserController extends Controller
         ]);
     }
 
-    public function getCode($user_id)
+    public function get_code($user_id)
     {
         $codes = Code::where('users_id', $user_id)->get();
 
@@ -54,8 +54,9 @@ class UserController extends Controller
            'message' => 'Message sent successfully'
         ]);
     }
-    public function getDevelopers($name)
-    {
+    public function get_developers(Request $request)
+    {   
+        $name = $request->name;
         $users = User::where('name', 'like', '%'.$name.'%')->get();
         return response()->json([
             'users' => $users
