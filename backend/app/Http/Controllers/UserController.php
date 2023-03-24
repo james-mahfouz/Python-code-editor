@@ -39,7 +39,7 @@ class UserController extends Controller
         ]);
     }
 
-    public function sendMessage(Request $request, $from_user_id, $to_user_id)
+    public function send_message(Request $request, $from_user_id, $to_user_id)
     {
         $text = $request->input('text');
         $chat = new Chat([
