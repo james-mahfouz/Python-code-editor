@@ -13,14 +13,6 @@ use App\Models\Chat;
 class UserController extends Controller
 {
 
-    public function get_all_users()
-    {
-        $user = Auth::user();
-        $users = User::select('id', 'name')->where('id', '!=', $user->id)->get();
-        return response()->json([
-            'users' => $users
-        ]);
-    }
 
     public function save_code(Request $request)
     {
@@ -42,8 +34,8 @@ class UserController extends Controller
         $codes = Code::where('users_id', $user_id)->get();
 
         return response()->json([
-           'success' => true,
-           'data' => $codes
+            'success' => true,
+            'data' => $codes
         ]);
     }
 
