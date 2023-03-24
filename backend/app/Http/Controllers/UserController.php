@@ -40,8 +40,8 @@ class UserController extends Controller
         $codes = Code::where('users_id', $user_id)->get();
 
         return response()->json([
-           'success' => true,
-           'data' => $codes
+            'success' => true,
+            'data' => $codes
         ]);
     }
 
