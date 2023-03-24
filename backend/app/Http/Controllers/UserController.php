@@ -39,11 +39,12 @@ class UserController extends Controller
         ]);
     }
 
-    public function send_message(Request $request, $from_user_id, $to_user_id)
+    public function send_message(Request $request, $to_user_id)
     {
         $text = $request->input('text');
+        $user = Auth::user();
         $chat = new Chat([
-            'from' => $from_user_id,
+            'from' => $user->id,
             'to' => $to_user_id,
             'text' => $text
         ]);
