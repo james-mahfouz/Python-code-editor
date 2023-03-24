@@ -9,7 +9,11 @@ class CompileController extends Controller
     public function compile(Request $request)
     {
         $pythonCode = $request->input('code');
-        $output = exec("python -c '{$pythonCode}' 2>&1");
+        $output = "";
+        exec("python -c '{$pythonCode}'", $outputArray);
+        foreach ($outputArray as $line) {
+            $output .= $line . "\n";
+        }
         return response()->json(['output' => $output]);
     }
 }
