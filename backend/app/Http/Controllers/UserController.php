@@ -11,9 +11,10 @@ class UserController extends Controller
     
     public function getAllUsers()
     {
-        return User::all();
-        // Alltable('users')->get();
-        // return $users;
+        $users = User::select('id', 'name')->get();
+        return response()->json([
+            'users' => $users
+        ]);
     }
 
 }
