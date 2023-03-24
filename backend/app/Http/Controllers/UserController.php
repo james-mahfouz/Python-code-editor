@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Auth;
 
 use Illuminate\Http\Request;
 use App\Models\User;
-use App\Model\Code;
+use App\Models\Code;
 
 
 class UserController extends Controller
@@ -26,6 +26,7 @@ class UserController extends Controller
 
         $code = new Code;
         $code->code = $request->code;
+        $code->title = $request->title;
         $code->users_id = $user->id;
         $code->save();
 
