@@ -43,15 +43,15 @@ class UserController extends Controller
     {
         $text = $request->input('text');
         $chat = new Chat([
-           'from' => $from_user_id,
-           'to' => $to_user_id,
-           'text' => $text
+            'from' => $from_user_id,
+            'to' => $to_user_id,
+            'text' => $text
         ]);
         $chat->save();
 
         return response()->json([
-           'success' => true,
-           'message' => 'Message sent successfully'
+            'success' => true,
+            'message' => 'Message sent successfully'
         ]);
     }
     public function getDevelopers($name)
