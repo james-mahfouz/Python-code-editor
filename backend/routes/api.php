@@ -18,7 +18,7 @@ Route::group(['prefix' => 'v1'], function(){
         Route::post('/logout', [AuthController::class, "logout"]);
         Route::get('/get_developers', [UserController::class, "get_developers"]);
         Route::post('/save_code', [UserController::class, "save_code"]);
-<<<<<<< HEAD
+
 
         Route::get('/codes/{user_id}',[UserController::class, "get_code"]);
 
