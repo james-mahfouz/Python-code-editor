@@ -15,7 +15,7 @@ Route::group(['prefix' => 'v1'], function(){
     
     Route::group(['middleware' => 'auth:api'], function(){
         Route::post('/logout', [AuthController::class, "logout"]);
-        Route::get('/get_all_users', [UserController::class, "getAllUsers"]);
+        Route::get('/get_all_users', [UserController::class, "get_all_users"]);
 
     });
 
