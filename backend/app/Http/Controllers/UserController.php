@@ -12,7 +12,7 @@ class UserController extends Controller
 {
 
 
-    public function save_code(Request $request)
+    public function saveCode(Request $request)
     {
         $user = Auth::user();
 
@@ -27,7 +27,7 @@ class UserController extends Controller
         ]);
     }
 
-    public function get_code($user_id)
+    public function getCode($user_id)
     {
         $codes = Code::where('users_id', $user_id)->get();
 
@@ -36,5 +36,11 @@ class UserController extends Controller
            'data' => $codes
         ]);
     }
-
+    public function getDevelopers($name)
+    {
+        $users = User::where('name', 'like', '%'.$name.'%')->get();
+        return response()->json([
+            'users' => $users
+        ]);
+    }
 }

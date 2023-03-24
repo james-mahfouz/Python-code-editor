@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
-    public function get_all_users()
+    public function getAllUsers()
     {
         $user = Auth::user();
 

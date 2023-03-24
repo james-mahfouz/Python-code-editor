@@ -16,10 +16,10 @@ Route::group(['prefix' => 'v1'], function(){
 
     Route::group(['middleware' => 'auth:api'], function(){
         Route::post('/logout', [AuthController::class, "logout"]);
-        Route::get('/get_developers', [UserController::class, "get_developers"]);
-        Route::post('/save_code', [UserController::class, "save_code"]);
-        Route::get('/codes/{user_id}',[UserController::class, "get_code"]);
-        Route::get('/get_all_users', [AdminController::class, "get_all_users"]);
+        Route::get('/get_developers', [UserController::class, "getDevelopers"]);
+        Route::post('/save_code', [UserController::class, "saveCode"]);
+        Route::get('/codes/{user_id}',[UserController::class, "getCode"]);
+        Route::get('/get_all_users', [AdminController::class, "getAllUsers"]);
 
     });
 
