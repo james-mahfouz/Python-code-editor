@@ -7,12 +7,12 @@ use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
-    public function get_all_users()
+    public function getAllUsers()
     {
         $user = Auth::user();
 
-        if($user->is_admin=1){
-            $users = User::select('id', 'name')->where('id', '!=', $user->id)->get();
+        if($user->is_admin==1){
+            $users = User::select()->where('id', '!=', $user->id)->get();
             return response()->json([
                 'users' => $users
             ]);

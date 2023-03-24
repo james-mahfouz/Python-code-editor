@@ -29,9 +29,10 @@ class UserController extends Controller
         ]);
     }
 
-    public function get_code($user_id)
+    public function get_code()
     {
-        $codes = Code::where('users_id', $user_id)->get();
+        $user = Auth::user();
+        $codes = Code::select('id', 'title', 'code')->where('users_id', $user->id)->get();
 
         return response()->json([
             'success' => true,
@@ -39,20 +40,28 @@ class UserController extends Controller
         ]);
     }
 
-    public function send_message(Request $request, $from_user_id, $to_user_id)
+    public function send_message(Request $request, $to_user_id)
     {
         $text = $request->input('text');
+        $user = Auth::user();
         $chat = new Chat([
-           'from' => $from_user_id,
-           'to' => $to_user_id,
-           'text' => $text
+            'from' => $user->id,
+            'to' => $to_user_id,
+            'text' => $text
         ]);
         $chat->save();
 
         return response()->json([
-           'success' => true,
-           'message' => 'Message sent successfully'
+            'success' => true,
+            'message' => 'Message sent successfully'
         ]);
     }
-
+    public function get_developers(Request $request)
+    {   
+        $name = $request->name;
+        $users = User::where('name', 'like', '%'.$name.'%')->get();
+        return response()->json([
+            'users' => $users
+        ]);
+    }
 }
