@@ -3,6 +3,9 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\UserController;
+
+
 
 Route::group(['prefix' => 'v1'], function(){
     Route::group(['prefix' => 'auth'], function () {
@@ -14,5 +17,7 @@ Route::group(['prefix' => 'v1'], function(){
         
     Route::group(['middleware' => 'auth:api'], function(){
         Route::post('/logout', [AuthController::class, "logout"]);
+        Route::get('/get_all_users', [UserController::class, "getAllUsers"]);
+
     });
 });
