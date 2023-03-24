@@ -29,9 +29,10 @@ class UserController extends Controller
         ]);
     }
 
-    public function get_code($user_id)
+    public function get_code()
     {
-        $codes = Code::where('users_id', $user_id)->get();
+        $user = Auth::user();
+        $codes = Code::select('id', 'title', 'code')->where('users_id', $user->id)->get();
 
         return response()->json([
             'success' => true,
