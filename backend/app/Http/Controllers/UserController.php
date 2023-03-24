@@ -10,7 +10,7 @@ use App\Models\Code;
 
 class UserController extends Controller
 {
-    
+
     public function get_all_users()
     {
         $user = Auth::user();
@@ -34,4 +34,15 @@ class UserController extends Controller
             "success" => true
         ]);
     }
+
+    public function get_code($user_id)
+    {
+        $codes = Code::where('users_id', $user_id)->get();
+
+        return response()->json([
+           'success' => true,
+           'data' => $codes
+        ]);
+    }
+
 }
