@@ -17,12 +17,10 @@ Route::group(['prefix' => 'v1'], function(){
         Route::post('/logout', [AuthController::class, "logout"]);
         Route::get('/get_all_users', [UserController::class, "get_all_users"]);
         Route::post('/save_code', [UserController::class, "save_code"]);
-<<<<<<< HEAD
 
         Route::get('/codes/{user_id}',[UserController::class, "get_code"]);
+        Route::post('/chats/{from_user_id}/{to_user_id}',[UserController::class, "sendMessage"]);
 
-=======
->>>>>>> 92aee76f83cf1cad6c81b79810795249e4dfa6c3
     });
 
     Route::post('/compile', [CompileController::class, "compile"]);
