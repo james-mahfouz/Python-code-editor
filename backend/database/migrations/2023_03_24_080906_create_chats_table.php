@@ -16,7 +16,6 @@ return new class extends Migration
             $table->foreignId('from')->constrained('users')->onDelete('cascade');
             $table->foreignId('to')->constrained('users')->onDelete('cascade');
             $table->string('text', 600)->nullable();
-            $table->primary(['from', 'to']);
             $table->timestamps();
         });
     }
