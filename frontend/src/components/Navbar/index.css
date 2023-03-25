@@ -1,0 +1,27 @@
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F2F4FF;
+    
+}
+.search-input{
+    width: 9rem;
+    height: 3rem;
+    border-radius: 0.8rem;
+    border: 3px solid var(--blue);
+    padding-right: 4rem;
+    outline: none;
+}
+
+.search-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-end{
+    display: flex;
+    flex-direction: row;
+}

@@ -7,6 +7,8 @@ import LoginPage from './Pages/LoginPage';
 import SignupPage from './Pages/SignupPage';
 import SignupButton from './components/Buttons/SignupButton';
 import FormInput from './components/FormInput'
+import NavbarTwo from './components/NavbarTwo';
+import Navbar from './components/Navbar';
 function App() {
   return (
     <Router>
@@ -17,6 +19,12 @@ function App() {
           <Route path="*" element={() => <div>404</div>} />
       </Routes>  
     </Router> 
+    
+    // <div>
+    //   <NavbarTwo/>
+    //   <Navbar/>
+    // </div>
+   
    
   );
 }
