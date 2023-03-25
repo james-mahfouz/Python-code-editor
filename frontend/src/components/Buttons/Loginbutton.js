@@ -1,6 +1,5 @@
 import React from "react";
-import "../index.css";
-import runImage from "../../images/run.PNG";
+import "./index.css";
 
 function LoginButton() {
     return <button className="all-btn">LOGIN</button>;

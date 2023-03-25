@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
+// import Buttons from './components/Buttons'
 import './App.css';
 import LandingPage from './Pages/LandingPage';
 import LoginPage from './Pages/LoginPage';
 import SignupPage from './Pages/SignupPage';
+import SignupButton from './components/Buttons/SignupButton';
 
 function App() {
   return (
