@@ -1,0 +1,29 @@
+:root { 
+    --blue: #0024FF; }
+.all-btn{
+    background-color: var(--blue);
+    color: white;
+    font-weight: bold;
+    width: fit-content;
+    height: 43px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    padding: 1rem;
+    padding-bottom: 2rem;
+    margin: 2rem;
+}
+.signup-btn{
+    background-color: white;
+    color: #0024FF;
+    border: 3px solid var(--blue);
+}
+
+.btn-image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
