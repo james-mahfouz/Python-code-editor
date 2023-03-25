@@ -9,15 +9,15 @@ const LandingPage = () => {
     const savedFiles = ['file1.txt', 'file2.doc', 'file3.jpg'];
     return(
         <div>
-           <NavbarTwo/>
-           <div className="landing-body">
+            <NavbarTwo/>
+            <div className="landing-body">
             <Sidebar  username={username} savedFiles={savedFiles}/>
             <CodeContainer/>
-           </div>
-           <div className="download-btn">
-             <DownloadButton/>
-           </div>
-          
+            </div>
+            <div className="download-btn">
+                <DownloadButton/>
+            </div>
+            
         </div>
     )
 }
