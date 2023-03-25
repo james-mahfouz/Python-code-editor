@@ -1,19 +1,11 @@
 import React, { useState } from 'react';
-// import NavLogo from '../NavLogo';
-// import RunButton from '../Buttons/runButton';
-// import ClearButton from '../Buttons/ClearButton';
+import ClearButton from '../Buttons/ClearButton';
+import RunButton from '../Buttons/RunButton';
 import './index.css'
 
 
 const CodeContainer=()=>{
 
-//   return (
-//     <div className="code-container">
-//       <div className="writen-code"></div>
-//       <div className="compiled-code"></div>
-      
-//     </div>
-//   );
 const [code, setCode] = useState('');
 
   const handleCodeChange = (event) => {
@@ -22,6 +14,8 @@ const [code, setCode] = useState('');
 
   return (
     <div className="code-container">
+    
+    <RunButton/>
     <div className="code-editor">
       <textarea
         className="code-editor-textarea"
@@ -30,6 +24,8 @@ const [code, setCode] = useState('');
         placeholder="Write your code here..."
       />
     </div>
+     <ClearButton/>
+    <div className="code-editor output"></div>
     </div>
   );
 }
