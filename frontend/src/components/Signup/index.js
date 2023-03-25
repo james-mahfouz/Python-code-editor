@@ -22,7 +22,7 @@ function Signup() {
         // Store the token in local storage
         localStorage.setItem('token', response.data.authorisation.token);
         } catch (error) {
-        console.error(error);
+        console.log(error);
         alert('Signup failed. Please try again.');
         }
     };
