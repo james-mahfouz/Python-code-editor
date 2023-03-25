@@ -8,6 +8,7 @@ const LandingPage = () => {
     return(
         <div>
            <NavbarTwo/>
+           
         </div>
     )
 }
