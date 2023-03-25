@@ -1,0 +1,28 @@
+.landing-body{
+    display: flex;
+    flex-direction: row;
+
+    width: 100%;
+    margin: 0;
+    
+}
+.landing-body>*:first-child {
+    flex-basis: 12%;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.landing-body>*:last-child {
+    flex-basis: 80%;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+.download-btn{
+    /* margin-left: 15rem; 
+    margin-top: -10rem; */
+    /* position: fixed; */
+} 
+.download-btn {
+    margin-left: 15rem;
+    margin-top: -10rem;
+}
