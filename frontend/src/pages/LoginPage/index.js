@@ -1,7 +1,43 @@
-const LoginPage = () =>{
+import React, { useState } from 'react';
+import axios from 'axios';
+
+
+
+const LoginPage = ()=>{
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+
+        const data = new FormData()
+        data.append('email', email)
+        data.append('password', password)
+
+        try {
+        const response = await axios.post('http://localhost:8000/api/v1/auth/signup', data);
+
+        alert('Signup successful!');
+
+        localStorage.setItem('token', response.data.authorisation.token);
+        } catch (error) {
+            console.error(error);
+            alert('Signup failed. Please try again.');
+        }
+    };
+
     return(
-        <h1>hello world</h1>
-    )
+        <form onSubmit={handleSubmit}>
+            <label>Email:</label>
+            <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+            
+            <label>Password:</label>
+            <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+            
+            <button type="submit">Submit</button>
+        </form>
+    );
+
 }
 
-export default LoginPage
+export default LoginPage;

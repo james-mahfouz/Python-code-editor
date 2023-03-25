@@ -1,7 +1,6 @@
 
 import React from 'react';
 
-
 const FormInput = ({ input }) => {
     const isPassword = input === "Password";
 
