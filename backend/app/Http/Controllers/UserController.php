@@ -12,8 +12,6 @@ use App\Models\Chat;
 
 class UserController extends Controller
 {
-
-
     public function save_code(Request $request)
     {
         $user = Auth::user();
@@ -29,16 +27,7 @@ class UserController extends Controller
         ]);
     }
 
-    public function get_code()
-    {
-        $user = Auth::user();
-        $codes = Code::select('id', 'title', 'code')->where('users_id', $user->id)->get();
-
-        return response()->json([
-            'success' => true,
-            'data' => $codes
-        ]);
-    }
+    
 
     public function send_message(Request $request, $to_user_id)
     {
@@ -62,6 +51,17 @@ class UserController extends Controller
         $users = User::where('name', 'like', '%'.$name.'%')->get();
         return response()->json([
             'users' => $users
+        ]);
+    }
+    
+    public function get_code()
+    {
+        $user = Auth::user();
+        $codes = Code::select('id', 'title', 'code')->where('users_id', $user->id)->get();
+
+        return response()->json([
+            'success' => true,
+            'data' => $codes
         ]);
     }
 }
