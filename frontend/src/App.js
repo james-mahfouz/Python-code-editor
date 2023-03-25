@@ -1,12 +1,21 @@
-import logo from './logo.svg';
+import React from 'react';
+import { Route, Router, Routes } from "react-router-dom";
+
 import './App.css';
-import Buttons from './components/Buttons'
+import LandingPage from './Pages/LandingPage';
+import LoginPage from './Pages/LoginPage';
+import SignupPage from './Pages/SignupPage';
+
 function App() {
   return (
-    <div>
-      
-      <Buttons/>
-    </div>
+    <Router>
+      <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/signup" element={<SignupPage />} />
+          <Route path="*" element={() => <div>404</div>} />
+      </Routes>  
+    </Router>  
   );
 }
 
