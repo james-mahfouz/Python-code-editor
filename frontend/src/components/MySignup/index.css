@@ -1,0 +1,42 @@
+body{
+    background-color: #fff;
+}
+.logo{
+    width: 8rem;
+    height: 7;
+}
+.signup-form{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin-left: 35%;
+margin-top: 3%;
+padding: 2rem;
+width: 30%;
+height: fit-content;
+border: 1px solid black;
+}
+
+.input-container {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.label {
+    font-weight: bold;
+    font-size: 14px;
+    margin-right: 2rem;
+}
+
+.input-field {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid var(--blue);
+    outline: none;
+}
+.signup-btn{
+    margin-left: 3.2rem;
+}
