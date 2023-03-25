@@ -1,12 +1,13 @@
 
 
 import FormInput from "../../components/FormInput";
+import Navbar from "../../components/Navbar";
+import NavbarTwo from "../../components/NavbarTwo";
 
 const LandingPage = () => {
     return(
         <div>
-            <h1>Landing Page</h1>
-            <FormInput input='Password'/>
+           <NavbarTwo/>
         </div>
     )
 }
