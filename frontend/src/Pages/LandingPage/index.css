@@ -17,11 +17,7 @@
     flex-grow: 0;
     flex-shrink: 0;
 }
-.download-btn{
-    /* margin-left: 15rem; 
-    margin-top: -10rem; */
-    /* position: fixed; */
-} 
+
 .download-btn {
     margin-left: 15rem;
     margin-top: -10rem;

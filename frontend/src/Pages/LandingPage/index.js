@@ -13,11 +13,11 @@ const LandingPage = () => {
             <div className="landing-body">
             <Sidebar  username={username} savedFiles={savedFiles}/>
             <CodeContainer/>
-            </div>
-            <div className="download-btn">
-                <DownloadButton/>
-            </div>
-            
+           </div>
+           <div className="download-btn">
+             <DownloadButton/>
+           </div>
+          
         </div>
     )
 }
