@@ -5,8 +5,7 @@ import NavbarTwo from "../../components/NavbarTwo";
 const LandingPage = () => {
     return(
         <div>
-           <Navbar/>
-           <CodeContainer/>
+           <NavbarTwo/>
         </div>
     )
 }
