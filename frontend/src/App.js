@@ -1,10 +1,11 @@
 import React from 'react';
 import { Route, Router, Routes } from "react-router-dom";
-
+// import Buttons from './components/Buttons'
 import './App.css';
 import LandingPage from './Pages/LandingPage';
 import LoginPage from './Pages/LoginPage';
 import SignupPage from './Pages/SignupPage';
+import SignupButton from './components/Buttons/SignupButton';
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
           <Route path="/signup" element={<SignupPage />} />
           <Route path="*" element={() => <div>404</div>} />
       </Routes>  
-    </Router>  
+    </Router> 
+   
   );
 }
 

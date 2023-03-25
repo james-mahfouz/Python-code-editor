@@ -1,5 +1,5 @@
 import React from "react";
-import "../index.css";
+import "./index.css";
 
 function ClearButton() {
     return <button className="all-btn signup-btn">CLEAR</button>;

@@ -1,5 +1,5 @@
 import React from "react";
-import "../index.css";
+import "./index.css";
 import messageImage from "../../images/message.png";
 
 function MessageButton() {
