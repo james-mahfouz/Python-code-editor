@@ -4,7 +4,7 @@ import axios from 'axios';
 
 
 
-function SignupForm(){
+function Signup(){
     const [isFormOpen, setIsFormOpen] = useState(false);
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -65,4 +65,4 @@ function SignupForm(){
 
 }
 
-export default SignupForm;
+export default Signup;
