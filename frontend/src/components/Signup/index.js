@@ -8,20 +8,16 @@ function Signup() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
-        const formData = {
-        name,
-        email,
-        password,
-        };
+        console.log(name, email, password)
+        const data = new FormData()
+        data.append('name', name)
+        data.append('email', email)
+        data.append('password', password)
 
         try {
-        const response = await axios.post('http://localhost:8000/api/v1/auth/signup', formData);
+        const response = await axios.post('http://localhost:8000/api/v1/auth/signup', data);
 
         alert('Signup successful!');
-        setName('');
-        setEmail('');
-        setPassword('');
 
         // Store the token in local storage
         localStorage.setItem('token', response.data.authorisation.token);

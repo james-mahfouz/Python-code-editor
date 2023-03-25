@@ -1,6 +1,6 @@
 import React, { useState } from 'react'; 
 import axios from 'axios';
-import NavLogo from '../NavLogo';
+import Logo from '../FormLogo';
 import "./index.css"
 
 
@@ -26,9 +26,9 @@ const Login = ()=>{
 
     return(
         <div className='form_container'>
-            <NavLogo />
+            <Logo />
             <h1>Login</h1>
-            <form className='' onSubmit={handleSubmit}>
+            <form className='form' onSubmit={handleSubmit}>
                 
                 <div className='input_field'>
                     <label>Email</label>
