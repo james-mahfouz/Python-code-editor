@@ -17,6 +17,8 @@ const LandingPage = () => {
            <div className="download-btn">
              <DownloadButton/>
            </div>
+
+        
           
         </div>
     )
