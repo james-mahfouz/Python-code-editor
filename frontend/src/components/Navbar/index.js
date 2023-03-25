@@ -1,6 +1,6 @@
 import React from 'react';
 import NavLogo from '../NavLogo';
-import LoginButton from '../Buttons/Loginbutton';
+import LoginButton from '../Buttons/LoginButton';
 import SignupButton from '../Buttons/SignupButton';
 import './index.css'
 
