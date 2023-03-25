@@ -19,7 +19,7 @@ Route::group(['prefix' => 'v1'], function(){
         Route::post('/get_developers', [UserController::class, "get_developers"]);
         Route::post('/save_code', [UserController::class, "save_code"]);
         Route::post('/chats/{from_user_id}/{to_user_id}', [UserController::class, "send_message"]);
-        Route::get('/get_all_users', [AdminController::class, "get_all_users"]);
+        Route::get('/get_all_users/{name}', [AdminController::class, "get_all_users"]);
         Route::get('/codes/{user_id}',[UserController::class, "get_code"]);
     });
 
