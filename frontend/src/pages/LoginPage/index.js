@@ -15,8 +15,8 @@ const LoginPage = ()=>{
         data.append('password', password)
 
         try {
-        const response = await axios.post('http://localhost:8000/api/v1/auth/signup', data);
-
+            const response = await axios.post('http://localhost:8000/api/v1/auth/login', data);
+        
         alert('Signup successful!');
 
         localStorage.setItem('token', response.data.authorisation.token);
