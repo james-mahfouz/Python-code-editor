@@ -5,6 +5,7 @@ import './App.css';
 import MainPage from './Pages/MainPage';
 import LoginPage from './Pages/LoginPage';
 import SignupPage from './Pages/SignupPage';
+import ChatPage from './Pages/ChatPage';
 import SignupButton from './components/Buttons/SignupButton';
 import FormInput from './components/FormInput'
 import NavbarTwo from './components/NavbarTwo';
@@ -18,6 +19,7 @@ function App() {
           <Route path="/landing" element={<LandingPage/>} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<SignupPage />} />
+          <Route path="/chat" element={<ChatPage/>}/>
           <Route path="*" element={() => <div>404</div>} />
       </Routes>  
     </Router> 
