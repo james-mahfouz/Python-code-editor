@@ -6,7 +6,7 @@ const LandingPage = () => {
     return(
         <div>
             <h1>Landing Page</h1>
-            <FormInput input='Password'/>
+            <FormInput input='Email'/>
         </div>
     )
 }
