@@ -1,30 +1,18 @@
 import React, { useState } from 'react';
-// import axios from 'axios';
+
 
 function Chatting() {
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+    const [sender, setSender] = useState('');
+    const [email, setReciever] = useState('');
+    const [text, setText] = useState('');
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(name, email, password)
+        console.log(sender, email, password)
         const data = new FormData()
-        data.append('name', name)
-        data.append('email', email)
-        data.append('password', password)
-
-        try {
-        const response = await axios.post('http://localhost:8000/api/v1/auth/signup', data);
-
-        alert('Signup successful!');
-
-        // Store the token in local storage
-        localStorage.setItem('token', response.data.authorisation.token);
-        } catch (error) {
-        console.log(error);
-        alert('Signup failed. Please try again.');
-        }
+        data.append('sender', sender)
+        data.append('reciever', reciever)
+        data.append('text', text)
     };
 
     return (
@@ -32,23 +20,23 @@ function Chatting() {
         <form onSubmit={handleSubmit}>
             <label>
             Name:
-            <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
+            <input type="text" value={name} onChange={(e) => setSender(e.target.value)} />
             </label>
             <br />
             <label>
-            Email:
-            <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+            reciever:
+            <input type="reciever" value={reciever} onChange={(e) => setReciever(e.target.value)} />
             </label>
             <br />
             <label>
-            Password:
-            <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+            Text:
+            <input type="text" value={text} onChange={(e) => setText(e.target.value)} />
             </label>
             <br />
-            <button type="submit">Submit</button>
+            <button type="submit">Send</button>
         </form>
         </div>
     );
 }
 
-export default Signup;
+export default Chatting;
