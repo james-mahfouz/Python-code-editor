@@ -1,5 +1,5 @@
-import React from 'react';
-import { Route, Router, Routes } from "react-router-dom";
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import './App.css';
 import LandingPage from './Pages/LandingPage';
@@ -15,7 +15,8 @@ function App() {
           <Route path="/signup" element={<SignupPage />} />
           <Route path="*" element={() => <div>404</div>} />
       </Routes>  
-    </Router>  
+    </Router>
+ 
   );
 }
 
