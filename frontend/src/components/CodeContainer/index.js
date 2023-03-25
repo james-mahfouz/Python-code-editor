@@ -24,7 +24,7 @@ const [code, setCode] = useState('');
         placeholder="Write your code here..."
       />
     </div>
-     <ClearButton/>
+    <ClearButton/>
     <div className="code-editor output"></div>
     </div>
   );
