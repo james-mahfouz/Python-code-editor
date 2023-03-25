@@ -7,13 +7,18 @@ const LoginBtn =()=>{
 return(
     <div>
         <button className="all-btn">LOGIN</button>
+        
         <button className="all-btn">RESET</button>
+        
         <button className="all-btn signup-btn">SIGNUP</button>
+        
         <button className="all-btn signup-btn">CLEAR</button>
+        
         <button className="all-btn run-btn btn-image">
             <img src={runImage} alt="any" />
             <p>RUN</p>
         </button>
+        
         <button className="all-btn run-btn btn-image">
             <img src={messageImage} alt="any" />
             <p>MESSAGES</p>    
@@ -25,6 +30,7 @@ return(
         <button className="all-btn run-btn btn-image">
             <img src={downloadImage} alt="any" />
             <p>DOWNLOAD</p>    
+        
         </button>
     </div>
     
