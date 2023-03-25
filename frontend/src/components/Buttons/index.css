@@ -1,5 +1,7 @@
 :root { 
-    --blue: #0024FF; }
+--blue: #0024FF;
+}
+
 .all-btn{
     background-color: var(--blue);
     color: white;
@@ -15,7 +17,7 @@
 }
 .signup-btn{
     background-color: white;
-    color: #0024FF;
+    color: var(--blue);
     border: 3px solid var(--blue);
 }
 
