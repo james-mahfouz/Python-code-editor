@@ -5,7 +5,7 @@ const token = {
     headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
 };
 
-const Sidebar = ()=> {
+const Sidebar = ({setSelectedCode})=> {
   const [savedFiles, setSavedFiles] = useState([]);
   const username = localStorage.getItem('name');
   const [selectedFile, setSelectedFile] = useState(null);
@@ -31,6 +31,7 @@ const Sidebar = ()=> {
   const handleFileClick = (file) => {
       setSelectedFile(selectedFile);
       console.log(selectedFile);
+      setSelectedCode(file.code); 
   }
 
   return (
@@ -42,8 +43,9 @@ const Sidebar = ()=> {
           <h3>Saved Files</h3>
           <ul>
             {savedFiles.map((file, index) => (
-              
-              <div key={file.id}><li onClick={() => handleFileClick(file)}> {index}){ codeStatus(file) }</li><br/></div>
+              <div key={file.id}>
+                <li onClick={() => handleFileClick(file)}> {index}){ codeStatus(file) }</li><br/>
+              </div>
             ))}
           </ul>
         </div>

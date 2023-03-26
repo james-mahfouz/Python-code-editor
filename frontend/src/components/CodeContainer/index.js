@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ClearButton from '../Buttons/ClearButton';
 import RunButton from '../Buttons/RunButton';
 import './index.css'
 import axios from 'axios';
 
 
-const CodeContainer=()=>{
+const CodeContainer=({selectedCode})=>{
 // const [code, setCode] = useState('');
 // const handleCodeChange = (event) => {
 //   setCode(event.target.value);
@@ -23,11 +23,17 @@ const handleSubmit = async (e) => {
         setOutput(response.data.output+ response.data.error);
 
     } catch (error) {
-        setOutput('Compilation failed. Please try again.');
+        setOutput('Compilation failed. Please try again.'); 
     }
     };
     const handleClear = () => {setOutput('');};
 
+    useEffect(() => {
+      if (selectedCode !== null) {
+        setCode(selectedCode);
+      }
+    }, [selectedCode]);
+  
     return (
         <div className="code-container">
         
