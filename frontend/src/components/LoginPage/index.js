@@ -1,15 +1,15 @@
 import React, { useState } from 'react'; 
 import axios from 'axios';
-import LoginButton from '../Buttons/LoginButton';
-import Logo from '../../images/logo.png'
-import "../MySignup/index.css"
+import Logo from '../FormLogo';
+import "./index.css"
+import NavbarTwo from '../NavbarTwo';
 
 
 
 const Login = ()=>{
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-
+    const navigate = useNavigate();
     const handleSubmit = async (event) => {
         event.preventDefault();
 
@@ -19,7 +19,10 @@ const Login = ()=>{
 
         try {
             const response = await axios.post('http://localhost:8000/api/v1/auth/login', data);
-            localStorage.setItem('token', response.data.authorisation.token);
+            if(response.data.status === "success"){
+                localStorage.setItem('token', response.data.authorisation.token);
+                navigate("/landing")
+            }
         } catch (error) {
             console.error(error);
         }
