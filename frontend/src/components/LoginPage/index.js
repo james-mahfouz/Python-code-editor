@@ -36,11 +36,11 @@ const Login = ()=>{
         <form onSubmit={handleSubmit}>
              <div className='signup-container'>
                 <label className='label' htmlFor="email">Email:</label>
-                <input className='input-field' type="email" placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)} />
+                <input className='input-field email' type="email" placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)} />
             </div><br/>
 
              <div className='signup-container'>
-                <label className='label' htmlFor="name">Name:</label>
+                <label className='label' htmlFor="name">Password:</label>
                 <input className='input-field pass' type="password" placeholder='Password' value={password} onChange={(e) => setPassword(e.target.value)}/>
             </div>
             <div className='loginn-btn'>

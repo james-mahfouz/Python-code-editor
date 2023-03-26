@@ -30,7 +30,6 @@ background-color: #fff;
     font-weight: bold;
     font-size: 16px;
     margin-right: 2rem;
-   
 }
 
 .input-field {
@@ -39,12 +38,22 @@ background-color: #fff;
     border-right: none;
     border-bottom: 2px solid var(--blue);
     outline: none;
+    /* margin-left: 2rem; */
 
 }
-.signup-btn{
-    margin-left: 3.2rem;
+.name{
+    margin-left: 2rem;
+}
+.email{
+ margin-left: 2.2rem;
+}
+.pass{
+    margin-left: 0.3rem;
+}
+.signupp-btn{
+    margin-left: 2.8rem;
     
 }
 .loginn-btn {
-    margin-left: 2rem;
+    margin-left: 2.8rem;
 }
