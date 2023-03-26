@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import UserList from './AllUsers';
+import AllUsers from './AllUsers';
 
 const token = {
     headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
@@ -49,7 +49,7 @@ function Chatting() {
         //         <button type="submit">Send Message</button>
         //     </form>
         // </div>
-       // <UserList />
+        //<AllUsers />
         <>chatting page</>
     );
 }

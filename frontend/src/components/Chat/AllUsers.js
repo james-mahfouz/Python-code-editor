@@ -24,10 +24,20 @@ function AllUsers() {
     }, []);
     
     return(
-        <div></div>
+        <div>
+            <h2>Select Developer to Chat</h2>
+            {
+                users.length > 0 ? ( users.map((user) => (
+                    <div key={user.id} onClick={() => handleUserClick(user.id)} > {user.name} </div>
+                )))  : (
+                    <div>Loading users...</div>
+                    )}
+                    {selectedUser && <div>Selected User ID: {selectedUser}</div>}
+            
+
+        </div>
     );
 
 
 }
-
-    
+export default AllUsers;
