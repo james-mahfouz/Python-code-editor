@@ -23,6 +23,9 @@ function AllUsers() {
     });
     }, []);
     
+    const handleUserClick = (userId) => {
+        setSelectedUser(userId);
+        };
     return(
         <div>
             <h2>Select Developer to Chat</h2>
