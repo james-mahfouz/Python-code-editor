@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+
 const token = {
     headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
 };
@@ -15,7 +16,7 @@ function Chatting() {
         } else if (name === "receiver") {
             setReceiver(value);
         }
-      };
+    ;
     const handleSubmit = async (e) => {
         e.preventDefault();
         const data = new FormData()
