@@ -29,7 +29,7 @@ const handleSubmit = async (e) => {
 
 
 
- return (
+return (
     <div className="code-container">
     
     <RunButton onClick={handleSubmit}/>
@@ -43,7 +43,9 @@ const handleSubmit = async (e) => {
       />
     </div>
     <ClearButton onClick={handleClear} />
-    <div className="code-editor output"></div>
+    <textarea className='code-editor' value={output} readOnly />
+
+    {/* <div className="code-editor output"></div> */}
     </div>
   );
 }
