@@ -14,7 +14,7 @@ function AllUsers() {
             
             try {
                 await axios.post(`http://localhost:8000/api/v1/get_all_user`,token);
-                setUsers(data.users)
+                // setUsers(data.users)
                 alert('Message sent successfully!');
                 
             } catch (error) {
