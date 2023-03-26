@@ -1,5 +1,5 @@
 body{
-    background-color: #fff;
+    background-color: var(--lightt-blue);
 }
 .logo{
     width: 8rem;
@@ -15,7 +15,9 @@ margin-top: 4rem;
 padding: 2rem;
 width: 350px;
 height: fit-content;
-border: 1px solid black;
+border-radius: 5px;
+box-shadow: 0 0 10px 0 var(--blue);
+background-color: #fff;
 }
 
 .input-container {
