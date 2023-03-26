@@ -15,6 +15,7 @@ Route::group(['prefix' => 'v1'], function(){
     });
 
     Route::group(['middleware' => 'auth:api'], function(){
+        Route::get('/verify', [UserController::class, "verify"]);
         Route::post('/logout', [AuthController::class, "logout"]);
         Route::post('/get_developers', [UserController::class, "get_developers"]);
         Route::post('/save_code', [UserController::class, "save_code"]);
