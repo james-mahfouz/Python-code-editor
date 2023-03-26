@@ -5,15 +5,15 @@ const token = {
     headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
 };
 
-const Sidebar = ()=> {
+const Sidebar = ({setSelectedCode})=> {
   const [savedFiles, setSavedFiles] = useState([]);
   const username = localStorage.getItem('name');
+  const [selectedFile, setSelectedFile] = useState(null);
+
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await axios.get('http://localhost:8000/api/v1/get_code', token);
-        console.log("hello",response.data.data[1].title)
-        console.log(response.data.data)
         setSavedFiles(response.data.data);
       } catch (e) {
         console.log(e);
@@ -24,8 +24,14 @@ const Sidebar = ()=> {
 
   const codeStatus =(file)=>{
     let title
-    return title = file.title !== ""? file.title: file.code
+    return title = file.title !== ""? file.title: file.code.split(" ").slice(0, 2).join(" ")
 
+  }
+
+  const handleFileClick = (file) => {
+      setSelectedFile(selectedFile);
+      console.log(selectedFile);
+      setSelectedCode(file.code); 
   }
 
   return (
@@ -37,7 +43,9 @@ const Sidebar = ()=> {
           <h3>Saved Files</h3>
           <ul>
             {savedFiles.map((file, index) => (
-              <li id={file.id} key={index}> {index} { codeStatus(file) }</li>
+              <div key={file.id}>
+                <li onClick={() => handleFileClick(file)}> {index}){ codeStatus(file) }</li><br/>
+              </div>
             ))}
           </ul>
         </div>
