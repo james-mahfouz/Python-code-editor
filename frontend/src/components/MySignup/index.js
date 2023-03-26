@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import FormInput from '../FormInput';
 import SignupButton from '../Buttons/SignupButton';
 import Logo from '../../images/logo.png'
 import './index.css'
+
 
 function Signup() {
     const [name, setName] = useState('');
@@ -32,13 +32,15 @@ function Signup() {
     };
 
     return (
+        <div>
+           
         <div className='signup-form'>
         <img className='logo' src={Logo} alt="logo" />
         <h1>Create Account</h1><br/>
         <form onSubmit={handleSubmit}>
             <div className='signup-container'>
                 <label className='label' htmlFor="name">Name:</label>
-                <input className='input-field' type="text" placeholder='Name' />
+                <input className='input-field' type="text" placeholder='Name' value={name} onChange={(e) => setName(e.target.value)} />
             </div><br/>
 
              <div className='signup-container'>
@@ -52,6 +54,7 @@ function Signup() {
             </div>
             <SignupButton className="signup-btn"/>
         </form>
+        </div><br/>
         </div>
     );
 }
