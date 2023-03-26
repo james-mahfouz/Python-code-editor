@@ -1,17 +1,20 @@
 import React, { useState } from 'react';
-
+import axios from 'axios';
+const token = {
+    headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
+  };
 
 function Chatting() {
     // const [sender, setSender] = useState('');
-    const [reciever, setReciever] = useState('');
-    const [text, setText] = useState('');
+    const [receiver, setReceiver] = useState('');
+    const [text, setMessage] = useState('');
 
     const handleInputChange = (event) => {
         const { name, value } = event.target;
         if (name === "text") {
-          setMessage(value);
+            setMessage(value);
         } else if (name === "receiver") {
-          setReceiver(value);
+            setReceiver(value);
         }
       };
 
@@ -19,13 +22,12 @@ function Chatting() {
         e.preventDefault();
         // console.log(sender, reciever, text)
         const data = new FormData()
-        data.append('sender', sender)
-        data.append('reciever', reciever)
+        data.append('receiver', receiver)
         data.append('text', text)
 
         //connecting to api's
         try {
-            const response = await axios.post('http://localhost:8000/api/v1/auth/send_message', data);
+            const response = await axios.post('http://localhost:8000/api/v1/auth/send_message', data,token);
     
             alert('Message sent successfully!');
     
