@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 const token = {
     headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
-  };
+};
 
 function Chatting() {
     // const [sender, setSender] = useState('');
@@ -22,21 +22,18 @@ function Chatting() {
         e.preventDefault();
         // console.log(sender, reciever, text)
         const data = new FormData()
-        data.append('receiver', receiver)
         data.append('text', text)
+        setReceiver(2)
 
-        //connecting to api's
         try {
-            const response = await axios.post('http://localhost:8000/api/v1/auth/send_message', data,token);
+            await axios.post(`http://localhost:8000/api/v1/chats/${receiver}`, data,token);
     
             alert('Message sent successfully!');
-    
-            // Store the token in local storage
-            localStorage.setItem('token', response.data.authorisation.token);
-            } catch (error) {
+            
+        } catch (error) {
             console.log(error);
             alert('Message not sent.');
-            }
+        }
     };
 
     return (
@@ -48,15 +45,6 @@ function Chatting() {
                         type="text"
                         name="text"
                         value={text}
-                        onChange={handleInputChange} />
-                </label>
-                <br />
-                <label>
-                    Receiver:
-                    <input
-                        type="text"
-                        name="receiver"
-                        value={receiver}
                         onChange={handleInputChange} />
                 </label>
                 <br />
