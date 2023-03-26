@@ -16,6 +16,7 @@ function Chatting() {
             setReceiver(value);
         }
         };
+        
     const handleSubmit = async (e) => {
         e.preventDefault();
         const data = new FormData()
