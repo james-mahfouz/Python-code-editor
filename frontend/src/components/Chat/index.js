@@ -15,7 +15,8 @@ function Chatting() {
         } else if (name === "receiver") {
             setReceiver(value);
         }
-      };
+        };
+        
     const handleSubmit = async (e) => {
         e.preventDefault();
         const data = new FormData()
@@ -47,7 +48,7 @@ function Chatting() {
             </form>
         </div>
             
-          
+        
     );
 }
 
