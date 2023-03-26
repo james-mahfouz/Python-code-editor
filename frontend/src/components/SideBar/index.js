@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import './index.css'
 import axios from 'axios';
-const token = {
-    headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
-};
 
 const Sidebar = ({setSelectedCode})=> {
+    const token = {
+      headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
+  };
   const [savedFiles, setSavedFiles] = useState([]);
   const username = localStorage.getItem('name');
   const [selectedFile, setSelectedFile] = useState(null);

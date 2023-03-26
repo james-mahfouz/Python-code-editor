@@ -6,12 +6,13 @@ import './index.css'
 import axios from 'axios';
 import DownloadButton from '../Buttons/DownloadButton';
 import SaveButton from '../Buttons/SaveButton';
-const token = {
-  headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
-};
+
 
 const CodeContainer=({selectedCode})=>{
-
+    const token = {
+        headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
+    };
+    const navigate = useNavigate()
     const [code, setCode] = useState('');
     const [output, setOutput] = useState('');
     const [code_title, setTitle] = useState('');
@@ -47,21 +48,24 @@ const CodeContainer=({selectedCode})=>{
       }
     }, [selectedCode]);
 
-    const save_code = () => {
-      
-      const data = new FormData()
-      data.append('code', code)
-      data.append('title', code_title)
-
+    const save_code = async () => {
       try {
-          const response = axios.post('http://localhost:8000/api/v1/save_code', data, token);
-          console.log(response)
-
-      } catch (error) {
-          console.error(error)
-      }
-    };
+        await axios.get("http://localhost:8000/api/v1/verify", token)
+        const data = new FormData()
+        data.append('code', code)
+        data.append('title', code_title)
     
+        try {
+            await axios.post('http://localhost:8000/api/v1/save_code', data, token);
+        } catch (error) {
+            console.error(error)
+        }
+      } catch (error) {
+          navigate("/login")
+      }
+    
+    
+    }
     
     return (
       <div>
