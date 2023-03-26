@@ -9,6 +9,7 @@ import SaveButton from '../Buttons/SaveButton';
 
 
 const CodeContainer=({selectedCode})=>{
+  
     const token = {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
     };
@@ -30,16 +31,25 @@ const CodeContainer=({selectedCode})=>{
     };
     const handleClear = () => {setOutput('');};
 
-    const handleDownload = () => {
-      const blob = new Blob([code], {type: "text/plain;charset=utf-8"});
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.download = "my_code.txt";
-      a.href = url;
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      URL.revokeObjectURL(url);
+    const handleDownload = async () => {
+      let errorOccurred = false;
+      try {
+        await axios.get("http://localhost:8000/api/v1/verify", token)
+      } catch (error) {
+        navigate("/login")
+        errorOccurred = true;
+      } 
+      if(!errorOccurred){
+        const blob = new Blob([code], {type: "text/plain;charset=utf-8"});
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.download = "my_code.txt";
+        a.href = url;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+      }
     };
 
     useEffect(() => {
@@ -51,6 +61,9 @@ const CodeContainer=({selectedCode})=>{
     const save_code = async () => {
       try {
         await axios.get("http://localhost:8000/api/v1/verify", token)
+      } catch (error) {
+          navigate("/login")
+      }
         const data = new FormData()
         data.append('code', code)
         data.append('title', code_title)
@@ -60,11 +73,8 @@ const CodeContainer=({selectedCode})=>{
         } catch (error) {
             console.error(error)
         }
-      } catch (error) {
-          navigate("/login")
-      }
-    
-    
+      
+  
     }
     
     return (
