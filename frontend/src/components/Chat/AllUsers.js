@@ -5,10 +5,10 @@ function AllUsers() {
     const [selectedUser, setSelectedUser] = useState(null);
     
         useEffect(() => {
-            fetch("localhost:8000/api/v1/get_developers") // replace with your API endpoint
+            fetch("localhost:8000/api/v1/get_all_user") 
             .then((response) => response.json())
             .then((data) => setUsers(data.users))
-            .catch((error) => console.error(error)); // log the error message
+            .catch((error) => console.error(error)); 
         }, []);
         
         const handleUserClick = (userId) => {
