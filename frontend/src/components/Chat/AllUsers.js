@@ -1,34 +1,35 @@
 import { useState , useEffect } from "react";
 
-function UserList(){
+function AllUsers() {
     const [users, setUsers] = useState([]);
-    const [selectedUserID, setSelectedUserId]= useEffect(null);
-
-    useEffect(() => {
-        fetch('/get_developers')
-        .then(response => response.json())
-        .then(data => setUsers(data.users));
-    }, []);
-
+    const [selectedUser, setSelectedUser] = useState(null);
     
-    const handleUserClick = (userId) => {
-        setSelectedUserId(userId);
+        useEffect(() => {
+            fetch("localhost:8000/api/v1/get_developers") // replace with your API endpoint
+            .then((response) => response.json())
+            .then((data) => setUsers(data.users))
+            .catch((error) => console.error(error)); // log the error message
+        }, []);
+        
+        const handleUserClick = (userId) => {
+        setSelectedUser(userId);
+        };
+    
+        return (
+        <div>
+            <h2>Users</h2>
+            {users.length > 0 ? (
+            users.map((user) => (
+                <div key={user.id} onClick={() => handleUserClick(user.id)}>
+                {user.name}
+                </div>
+            ))
+            ) : (
+            <div>Loading users...</div>
+            )}
+            {selectedUser && <div>Selected User ID: {selectedUser}</div>}
+        </div>
+        );
     }
-
-    return(
-        <div>
-            <h2>USERS</h2>
-            {users.map(user => (
-        <div key={user.id} onClick={() => handleUserClick(user.id)}>
-        {user.name}
-        </div>
-    ))}
-    {selectedUserId && (
-        <div>
-        Selected User ID: {selectedUserId}
-        </div>
-    )}
-        </div>
-    );
-
-}
+    
+    export default AllUsers;
