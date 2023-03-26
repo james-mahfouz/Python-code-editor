@@ -12,6 +12,12 @@ use App\Models\Chat;
 
 class UserController extends Controller
 {
+    public function verify(){
+        return response()->json([
+            "success" => true
+        ]);
+    }
+
     public function save_code(Request $request)
     {
         $user = Auth::user();

@@ -7,7 +7,8 @@ import MessageButton from "./MessageButton";
 import LogoutButton from "./LogoutButton";
 import DownloadButton from "./DownloadButton";
 import SearchButton from "./SearchButton"
-
+import SignupButton2 from "./SignupButton2";
+import SaveButton from "./SaveButton";
 
 export { 
     LoginButton, 
@@ -18,5 +19,7 @@ export {
     MessageButton, 
     LogoutButton, 
     DownloadButton,
-    SearchButton 
+    SearchButton,
+    SignupButton2,
+    SaveButton 
 };

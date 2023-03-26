@@ -6,7 +6,6 @@ import Logo from '../../images/logo.png'
 import "../MySignup/index.css"
 
 
-
 const Login = ()=>{
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -25,7 +24,7 @@ const Login = ()=>{
                 navigate("/landing")
             }
         } catch (error) {
-            console.error(error);
+            console.log(error);
         }
     };
 
@@ -34,13 +33,13 @@ const Login = ()=>{
         <img className='logo' src={Logo} alt="logo" />
         <h1>Login</h1><br/>
         <form onSubmit={handleSubmit}>
-             <div className='signup-container'>
+            <div className='signup-container'>
                 <label className='label' htmlFor="email">Email:</label>
-                <input className='input-field' type="email" placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)} />
+                <input className='input-field email' type="email" placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)} />
             </div><br/>
 
-             <div className='signup-container'>
-                <label className='label' htmlFor="name">Name:</label>
+            <div className='signup-container'>
+                <label className='label' htmlFor="name">Password:</label>
                 <input className='input-field pass' type="password" placeholder='Password' value={password} onChange={(e) => setPassword(e.target.value)}/>
             </div>
             <div className='loginn-btn'>

@@ -5,7 +5,10 @@
     margin: 0;
     border-radius: 5px;
 }
-
+.left-editor{
+    display: flex;
+    flex-direction: row;
+}
 .code-editor {
     border-radius: 5px;
     border: 1px solid #ccc;
