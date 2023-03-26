@@ -49,8 +49,8 @@ function Chatting() {
         //         <button type="submit">Send Message</button>
         //     </form>
         // </div>
-        <UserList />
-        
+       // <UserList />
+        <>chatting page</>
     );
 }
 
