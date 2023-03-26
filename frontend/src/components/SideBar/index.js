@@ -8,6 +8,8 @@ const token = {
 const Sidebar = ()=> {
   const [savedFiles, setSavedFiles] = useState([]);
   const username = localStorage.getItem('name');
+  const [selectedFile, setSelectedFile] = useState(null);
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -26,6 +28,11 @@ const Sidebar = ()=> {
 
   }
 
+  const handleFileClick = (file) => {
+      setSelectedFile(selectedFile);
+      console.log(selectedFile);
+  }
+
   return (
     
     <div className="container">
@@ -36,7 +43,7 @@ const Sidebar = ()=> {
           <ul>
             {savedFiles.map((file, index) => (
               
-              <div><li id={file.id} key={index}> {index}){ codeStatus(file) }</li><br/></div>
+              <div key={file.id}><li onClick={() => handleFileClick(file)}> {index}){ codeStatus(file) }</li><br/></div>
             ))}
           </ul>
         </div>
