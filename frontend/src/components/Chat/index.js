@@ -47,7 +47,7 @@ function Chatting() {
             </form>
         </div>
             
-          
+        
     );
 }
 

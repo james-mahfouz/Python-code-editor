@@ -35,7 +35,7 @@ function Signup() {
 
     return (
         <div>
-           
+        
         <div className='signup-form'>
         <img className='logo' src={Logo} alt="logo" />
         <h1>Create Account</h1><br/>
@@ -45,16 +45,16 @@ function Signup() {
                 <input className='input-field name' type="text" placeholder='Name' value={name} onChange={(e) => setName(e.target.value)} />
             </div><br/>
 
-             <div className='signup-container'>
+            <div className='signup-container'>
                 <label className='label' htmlFor="email">Email:</label>
                 <input className='input-field email' type="email" placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)}/>
             </div><br/>
 
-             <div className='signup-container'>
+            <div className='signup-container'>
                 <label className='label' htmlFor="name">Password:</label>
                 <input className='input-field pass' type="password" placeholder='Password' value={password} onChange={(e) => setPassword(e.target.value)}/>
             </div>
-             <div className="signupp-btn"><SignupButton2/></div>
+            <div className="signupp-btn"><SignupButton2/></div>
             <div className='signup-container'>
                 <label className='label' htmlFor="name">Already have an account?<a href='login'>Login</a></label>
             </div>
