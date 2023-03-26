@@ -32,7 +32,10 @@ function CodeRunner() {
             
             <br />
             
-            <button type="submit">Run</button>
+
+            {/* NOTE I ADDED type="submit" LAL RunButton COMPONENT :) */}
+            <RunButton/>
+
             
             <button type="button" onClick={handleClear}>Clear</button>
             
@@ -42,7 +45,7 @@ function CodeRunner() {
             <textarea value={output} readOnly />
             </label>
         </div>
-        
+
         );
 
 

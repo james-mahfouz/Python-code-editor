@@ -11,10 +11,10 @@ const LandingPage = () => {
         <div>
             <NavbarTwo/>
             <div className="landing-body">
-               <Sidebar  username={username} savedFiles={savedFiles}/>
-               <div>
-                   <CodeContainer/>
-                   <DownloadButton/>
+                <Sidebar  username={username} savedFiles={savedFiles}/>
+                <div>
+                    <CodeContainer/>
+                    <DownloadButton/>
                 </div>
             </div>
         </div> 
