@@ -3,19 +3,19 @@ body{
 }
 .logo{
     width: 8rem;
-    height: auto;
+    height: 7;
 }
 .signup-form{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 100px;
-    padding: 2rem;
-    margin: auto;
-    width: 350px;
-    height: fit-content;
-    border: 1px solid black;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin-top: 100px;
+padding: 2rem;
+margin: auto;
+width: 350px;
+height: fit-content;
+border: 1px solid black;
 }
 
 .input-container {
@@ -26,8 +26,9 @@ body{
 
 .label {
     font-weight: bold;
-    font-size: 14px;
+    font-size: 16px;
     margin-right: 2rem;
+   
 }
 
 .input-field {
@@ -36,4 +37,9 @@ body{
     border-right: none;
     border-bottom: 2px solid var(--blue);
     outline: none;
+
+}
+.signup-btn{
+    margin-left: 3.2rem;
+    
 }

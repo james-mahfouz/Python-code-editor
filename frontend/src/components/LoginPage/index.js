@@ -1,48 +1,55 @@
-import React, { useState } from 'react'; 
+import React, { useState } from 'react';
 import axios from 'axios';
-import Logo from '../FormLogo';
-import "./index.css"
+import LoginButton from '../Buttons/LoginButton';
+import Logo from '../../images/logo.png'
+import './index.css'
 import NavbarTwo from '../NavbarTwo';
 
-
-
-const Login = ()=>{
+function Signup() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    const handleSubmit = async (event) => {
-        event.preventDefault();
-
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        console.log(email, password)
         const data = new FormData()
         data.append('email', email)
         data.append('password', password)
 
         try {
-            const response = await axios.post('http://localhost:8000/api/v1/auth/login', data);
-            localStorage.setItem('token', response.data.authorisation.token);
+        const response = await axios.post('http://localhost:8000/api/v1/auth/signup', data);
+
+        alert('Signup successful!');
+
+        // Store the token in local storage
+        localStorage.setItem('token', response.data.authorisation.token);
         } catch (error) {
-            console.error(error);
+        console.log(error);
+        alert('Signup failed. Please try again.');
         }
     };
 
-    return(
-        <div className='form_container'>
-            <Logo />
-            <h1>Login</h1>
-            <form className='form' onSubmit={handleSubmit}>
-                
-                <div className='input_field'>
-                    <label>Email</label>
-                    <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-                </div>
-                <div className='input_field'>
-                    <label>Password</label>
-                    <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-                </div>
-                <button type="submit">Submit</button>
-            </form>
+    return (
+        <div>  
+        <div className='signup-form'>
+        <img className='logo' src={Logo} alt="logo" />
+        <h1>Create Account</h1><br/>
+        <form onSubmit={handleSubmit}>
+
+             <div className='signup-container'>
+                <label className='label' htmlFor="email">Email:</label>
+                <input className='input-field' type="email" placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)}/>
+            </div><br/>
+
+             <div className='signup-container'>
+                <label className='label' htmlFor="password">Password</label>
+                <input className='input-field pass' type="password" placeholder='Password' value={password} onChange={(e) => setPassword(e.target.value)}/>
+            </div>
+            <LoginButton className="signup-btn"/>
+        </form>
+        </div><br/>
         </div>
     );
 }
 
-export default Login;
+export default Signup;
