@@ -34,9 +34,9 @@ class UserController extends Controller
     }
     public function get_all_users()
     {
-        // $user = Auth::user();
+        $user = Auth::user();
         // ->where('id', '!=', $user->id)
-        $users = User::select()->get();
+        $users = User::select()->where('id', '!=', $user->id)->get();
         return response()->json([
             'users' => $users
         ]);
