@@ -28,7 +28,7 @@ const Login = ()=>{
     return(
         <div className='signup-form'>
         <img className='logo' src={Logo} alt="logo" />
-        <h1>Create Account</h1><br/>
+        <h1>Login</h1><br/>
         <form onSubmit={handleSubmit}>
              <div className='signup-container'>
                 <label className='label' htmlFor="email">Email:</label>
@@ -39,7 +39,11 @@ const Login = ()=>{
                 <label className='label' htmlFor="name">Name:</label>
                 <input className='input-field pass' type="password" placeholder='Password' value={password} onChange={(e) => setPassword(e.target.value)}/>
             </div>
-            <LoginButton className="signup-btn"/>
+            <div className='signup-container'><LoginButton className="signup-btn"/></div>
+
+            <div className='signup-container'>
+                <label className='label' htmlFor="name">Don't have an account ?<a href='signup'>Signup</a></label>
+            </div>
         </form>
         </div>
     );

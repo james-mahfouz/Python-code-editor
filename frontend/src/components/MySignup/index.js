@@ -50,6 +50,9 @@ function Signup() {
                 <input className='input-field pass' type="password" placeholder='Password' value={password} onChange={(e) => setPassword(e.target.value)}/>
             </div>
             <SignupButton className="signup-btn"/>
+            <div className='signup-container'>
+                <label className='label' htmlFor="name">Already have an account?<a href='signup'>Signin</a></label>
+            </div>
         </form>
         </div>
     );
