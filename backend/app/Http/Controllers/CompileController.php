@@ -10,10 +10,17 @@ class CompileController extends Controller
     {
         $pythonCode = $request->input('code');
         $output = "";
-        exec("python -c '{$pythonCode}'", $outputArray);
+        exec("python -c '{$pythonCode}' 2> error.log", $outputArray, $returnCode);
         foreach ($outputArray as $line) {
             $output .= $line . "\n";
         }
-        return response()->json(['output' => $output]);
+        $error = "";
+        if ($returnCode !== 0) {
+            $error = file_get_contents('error.log');
+        }
+        return response()->json([
+            'output' => $output,
+            'error' => $error
+        ]);
     }
 }

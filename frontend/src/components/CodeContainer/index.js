@@ -19,10 +19,10 @@ const handleSubmit = async (e) => {
 
   try {
       const response = await axios.post('http://localhost:8000/api/v1/compile', { code });
-      setOutput(response.data.output);
+      setOutput(response.data.output+ response.data.error);
+
   } catch (error) {
-      console.error(error);
-      alert('Compilation failed. Please try again.');
+      setOutput('Compilation failed. Please try again.');
   }
   };
   const handleClear = () => {setOutput('');};
