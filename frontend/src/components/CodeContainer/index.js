@@ -10,44 +10,43 @@ const CodeContainer=()=>{
 // const handleCodeChange = (event) => {
 //   setCode(event.target.value);
 // };
+
+
 const [code, setCode] = useState('');
 const [output, setOutput] = useState('');
 
 const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+        const response = await axios.post('http://localhost:8000/api/v1/compile', { code });
+        setOutput(response.data.output+ response.data.error);
+
+    } catch (error) {
+        setOutput('Compilation failed. Please try again.');
+    }
+    };
+    const handleClear = () => {setOutput('');};
+
+    return (
+        <div className="code-container">
         
-  e.preventDefault();
+        <RunButton onClick={handleSubmit}/>
 
-  try {
-      const response = await axios.post('http://localhost:8000/api/v1/compile', { code });
-      setOutput(response.data.output+ response.data.error);
+        <div className="code-editor">
+          <textarea
+            className="code-editor-textarea"
+            value={code}
+            onChange={(e) => setCode(e.target.value)}
+            placeholder="Write your code here..."
+          />
+        </div>
+        <ClearButton onClick={handleClear} />
+        <textarea className='code-editor' value={output} readOnly />
 
-  } catch (error) {
-      setOutput('Compilation failed. Please try again.');
-  }
-  };
-  const handleClear = () => {setOutput('');};
-
-
-
-return (
-    <div className="code-container">
-    
-    <RunButton onClick={handleSubmit}/>
-
-    <div className="code-editor">
-      <textarea
-        className="code-editor-textarea"
-        value={code}
-        onChange={(e) => setCode(e.target.value)}
-        placeholder="Write your code here..."
-      />
-    </div>
-    <ClearButton onClick={handleClear} />
-    <textarea className='code-editor' value={output} readOnly />
-
-    {/* <div className="code-editor output"></div> */}
-    </div>
-  );
+        {/* <div className="code-editor output"></div> */}
+        </div>
+      );
 }
 
 export default CodeContainer;
