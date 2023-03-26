@@ -16,7 +16,6 @@ const LandingPage = () => {
                 <Sidebar  setSelectedCode={setSelectedCode}/>
                 <div>
                     <CodeContainer selectedCode={selectedCode}/>
-                    <DownloadButton/>
                 </div>
             </div>
         </div> 

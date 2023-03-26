@@ -13,6 +13,8 @@ const NavbarTwo=()=> {
   const goChat =()=>{
     navigate('/chat');
   }
+
+
   return (
     <nav className="navbar">
       <div>

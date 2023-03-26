@@ -3,6 +3,8 @@ import ClearButton from '../Buttons/ClearButton';
 import RunButton from '../Buttons/RunButton';
 import './index.css'
 import axios from 'axios';
+import DownloadButton from '../Buttons/DownloadButton';
+import SaveButton from '../Buttons/SaveButton';
 
 
 const CodeContainer=({selectedCode})=>{
@@ -35,23 +37,32 @@ const handleSubmit = async (e) => {
     }, [selectedCode]);
   
     return (
+      <div>
         <div className="code-container">
         
         <RunButton onClick={handleSubmit}/>
 
         <div className="code-editor">
+          
           <textarea
             className="code-editor-textarea"
             value={code}
             onChange={(e) => setCode(e.target.value)}
             placeholder="Write your code here..."
           />
+          
         </div>
+        
         <ClearButton onClick={handleClear} />
         <textarea className='code-editor' value={output} readOnly />
 
-        {/* <div className="code-editor output"></div> */}
+ 
         </div>
+        <div className='left-editor'>
+            <DownloadButton/>
+            <SaveButton/>
+        </div>
+      </div> 
       );
 }
 
