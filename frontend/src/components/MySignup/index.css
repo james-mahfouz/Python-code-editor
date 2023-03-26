@@ -26,8 +26,9 @@ border: 1px solid black;
 
 .label {
     font-weight: bold;
-    font-size: 14px;
+    font-size: 16px;
     margin-right: 2rem;
+   
 }
 
 .input-field {
@@ -36,7 +37,9 @@ border: 1px solid black;
     border-right: none;
     border-bottom: 2px solid var(--blue);
     outline: none;
+
 }
 .signup-btn{
     margin-left: 3.2rem;
+    
 }

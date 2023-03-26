@@ -1,7 +1,8 @@
 import React, { useState } from 'react'; 
 import axios from 'axios';
-import Logo from '../FormLogo';
+import Logo from '../../images/logo.png';
 import "./index.css"
+import NavbarTwo from '../NavbarTwo';
 
 
 
@@ -26,10 +27,11 @@ const Login = ()=>{
 
     return(
         <div className='form_container'>
-            <Logo />
+            <NavbarTwo/>
+            
             <h1>Login</h1>
-            <form className='form' onSubmit={handleSubmit}>
-                
+            <form className='form signup-form' onSubmit={handleSubmit}>
+                <img className='logo' src={Logo} alt="logo" />
                 <div className='input_field'>
                     <label>Email</label>
                     <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
