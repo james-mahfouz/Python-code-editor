@@ -26,7 +26,14 @@ class UserController extends Controller
             "success" => true
         ]);
     }
-
+    public function get_all_users()
+    {
+        $user = Auth::user();
+        $users = User::select()->where('id', '!=', $user->id)->get();
+        return response()->json([
+            'users' => $users
+        ]);
+    }
     public function get_developers(Request $request)
     {   
         $name = $request->name;
@@ -52,6 +59,7 @@ class UserController extends Controller
             'message' => 'Message sent successfully'
         ]);
     }
+
     
     
     public function get_code()
