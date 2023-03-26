@@ -3,7 +3,7 @@ import axios from 'axios';
 import SignupButton from '../Buttons/SignupButton';
 import Logo from '../../images/logo.png'
 import './index.css'
-import NavbarTwo from '../NavbarTwo';
+
 
 function Signup() {
     const [name, setName] = useState('');
@@ -33,7 +33,7 @@ function Signup() {
 
     return (
         <div>
-        <NavbarTwo/>    
+           
         <div className='signup-form'>
         <img className='logo' src={Logo} alt="logo" />
         <h1>Create Account</h1><br/>

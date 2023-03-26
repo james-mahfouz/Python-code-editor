@@ -20,7 +20,7 @@ function Chatting() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        // console.log(sender, reciever, text)
+        console.log( receiver, text)
         const data = new FormData()
         data.append('text', text)
         setReceiver(2)

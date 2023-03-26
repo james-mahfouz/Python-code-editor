@@ -1,55 +1,54 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'; 
 import axios from 'axios';
 import LoginButton from '../Buttons/LoginButton';
 import Logo from '../../images/logo.png'
-import './index.css'
-import NavbarTwo from '../NavbarTwo';
+import "../MySignup/index.css"
 
-function Signup() {
+
+
+const Login = ()=>{
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        console.log(email, password)
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+
         const data = new FormData()
         data.append('email', email)
         data.append('password', password)
 
         try {
-        const response = await axios.post('http://localhost:8000/api/v1/auth/signup', data);
-
-        alert('Signup successful!');
-
-        // Store the token in local storage
-        localStorage.setItem('token', response.data.authorisation.token);
+            const response = await axios.post('http://localhost:8000/api/v1/auth/login', data);
+            localStorage.setItem('token', response.data.authorisation.token);
         } catch (error) {
-        console.log(error);
-        alert('Signup failed. Please try again.');
+            console.error(error);
         }
     };
 
-    return (
-        <div>  
+    return(
         <div className='signup-form'>
         <img className='logo' src={Logo} alt="logo" />
-        <h1>Create Account</h1><br/>
+        <h1>Login</h1><br/>
         <form onSubmit={handleSubmit}>
-
              <div className='signup-container'>
                 <label className='label' htmlFor="email">Email:</label>
-                <input className='input-field' type="email" placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)}/>
+                <input className='input-field' type="email" placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)} />
             </div><br/>
 
              <div className='signup-container'>
-                <label className='label' htmlFor="password">Password</label>
+                <label className='label' htmlFor="name">Name:</label>
                 <input className='input-field pass' type="password" placeholder='Password' value={password} onChange={(e) => setPassword(e.target.value)}/>
             </div>
-            <LoginButton className="signup-btn"/>
+            <div className='loginn-btn'>
+                <LoginButton/>
+            </div>
+
+            <div className='signup-container'>
+                <label className='label' htmlFor="name">Don't have an account ?<a href='signup'>Signup</a></label>
+            </div>
         </form>
-        </div><br/>
         </div>
     );
 }
 
-export default Signup;
+export default Login;
