@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import LoginButton from '../Buttons/LoginButton';
 import Logo from '../../images/logo.png'
-import "./index.css"
+// import "./index.css"
+import "../MySignup/index.css"
 
 
 
@@ -39,7 +40,9 @@ const Login = ()=>{
                 <label className='label' htmlFor="name">Name:</label>
                 <input className='input-field pass' type="password" placeholder='Password' value={password} onChange={(e) => setPassword(e.target.value)}/>
             </div>
-            <div className='signup-container'><LoginButton className="signup-btn"/></div>
+            <div className='loginn-btn'>
+                <LoginButton/>
+            </div>
 
             <div className='signup-container'>
                 <label className='label' htmlFor="name">Don't have an account ?<a href='signup'>Signup</a></label>
