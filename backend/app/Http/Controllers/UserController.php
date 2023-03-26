@@ -13,9 +13,18 @@ use App\Models\Chat;
 class UserController extends Controller
 {
     public function verify(){
-        return response()->json([
+        $user = Auth::user();
+        if ($user){
+            return response()->json([
             "success" => true
-        ]);
+            ]);
+        }
+        else{
+            return response()->json([
+            "success" => false
+            ]);
+        }
+        
     }
 
     public function save_code(Request $request)
@@ -35,6 +44,7 @@ class UserController extends Controller
     public function get_all_users()
     {
         $user = Auth::user();
+        // ->where('id', '!=', $user->id)
         $users = User::select()->where('id', '!=', $user->id)->get();
         return response()->json([
             'users' => $users

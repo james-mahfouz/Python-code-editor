@@ -15,15 +15,14 @@ Route::group(['prefix' => 'v1'], function(){
     });
 
     Route::group(['middleware' => 'auth:api'], function(){
-        Route::get('/verify', [UserController::class, "verify"]);
         Route::post('/logout', [AuthController::class, "logout"]);
         Route::post('/get_developers', [UserController::class, "get_developers"]);
-        Route::post('/get_all_user', [UserController::class, "get_all_user"]);
+        Route::post('/get_all_user', [UserController::class, "get_all_users"]);
         Route::post('/save_code', [UserController::class, "save_code"]);
         Route::post('/chats/{to_user_id}', [UserController::class, "send_message"]);
         Route::get('/get_code',[UserController::class, "get_code"]);
 
     });
-
+    Route::get('/verify', [UserController::class, "verify"]);
     Route::post('/compile', [CompileController::class, "compile"]);
 });
