@@ -8,11 +8,6 @@ import SaveButton from '../Buttons/SaveButton';
 
 
 const CodeContainer=({selectedCode})=>{
-// const [code, setCode] = useState('');
-// const handleCodeChange = (event) => {
-//   setCode(event.target.value);
-// };
-
 
 const [code, setCode] = useState('');
 const [output, setOutput] = useState('');
@@ -30,11 +25,24 @@ const handleSubmit = async (e) => {
     };
     const handleClear = () => {setOutput('');};
 
-    useEffect(() => {
-      if (selectedCode !== null) {
-        setCode(selectedCode);
-      }
-    }, [selectedCode]);
+    const handleDownload = () => {
+    const blob = new Blob([code], {type: "text/plain;charset=utf-8"});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.download = "my_code.txt";
+    a.href = url;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+   
+  };
+
+  useEffect(() => {
+    if (selectedCode !== null) {
+      setCode(selectedCode);
+    }
+  }, [selectedCode]);
   
     return (
       <div>
@@ -59,8 +67,8 @@ const handleSubmit = async (e) => {
  
         </div>
         <div className='left-editor'>
-            <DownloadButton/>
-            <SaveButton/>
+           <div onClick={handleDownload}><DownloadButton/></div> 
+            <div><SaveButton/></div>
         </div>
       </div> 
       );
