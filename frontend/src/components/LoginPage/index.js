@@ -6,7 +6,6 @@ import Logo from '../../images/logo.png'
 import "../MySignup/index.css"
 
 
-
 const Login = ()=>{
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');

@@ -4,7 +4,15 @@ import MessageButton from '../Buttons/MessageButton';
 import LogoutButton from '../Buttons/LogoutButton';
 import '../Navbar/index.css'
 import SearchButton from '../Buttons/SearchButton';
+import { useNavigate } from "react-router-dom";
+
 const NavbarTwo=()=> {
+
+  const navigate = useNavigate();
+
+  const goChat =()=>{
+    navigate('/chat');
+  }
   return (
     <nav className="navbar">
       <div>
@@ -15,8 +23,8 @@ const NavbarTwo=()=> {
         <SearchButton/>
       </div>
       <div className="navbar-end">
-        <MessageButton />
-        <LogoutButton />
+        <div onClick={goChat}><MessageButton/></div>
+        <div><LogoutButton /></div>
         
       </div>
     </nav>
