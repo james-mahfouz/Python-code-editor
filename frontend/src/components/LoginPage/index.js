@@ -1,8 +1,9 @@
 import React, { useState } from 'react'; 
 import axios from 'axios';
-import Logo from '../FormLogo';
-import "./index.css"
-import NavbarTwo from '../NavbarTwo';
+import { useNavigate } from "react-router-dom";
+import LoginButton from '../Buttons/LoginButton';
+import Logo from '../../images/logo.png'
+import "../MySignup/index.css"
 
 
 
