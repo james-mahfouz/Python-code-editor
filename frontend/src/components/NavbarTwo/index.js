@@ -14,6 +14,10 @@ const NavbarTwo=()=> {
     navigate('/chat');
   }
 
+  const handleLogout = () => {
+    localStorage.removeItem('token');
+    navigate('/');
+  };
 
   return (
     <nav className="navbar">
@@ -26,7 +30,7 @@ const NavbarTwo=()=> {
       </div>
       <div className="navbar-end">
         <div onClick={goChat}><MessageButton/></div>
-        <div><LogoutButton /></div>
+        <div onClick={handleLogout}><LogoutButton /></div>
         
       </div>
     </nav>
