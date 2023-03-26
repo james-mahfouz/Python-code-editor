@@ -23,7 +23,6 @@ const NavbarTwo=()=> {
       }
     }).then((response) => {
       localStorage.removeItem('token');
-      console.log(response.data);
       navigate('/');
     }).catch((error) => {
       console.log(error);

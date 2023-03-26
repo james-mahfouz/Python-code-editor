@@ -33,7 +33,6 @@ const CodeContainer=({selectedCode})=>{
 
     const handleDownload = async () => {
         const response = await axios.get("http://localhost:8000/api/v1/verify", token)
-        console.log(response)
         if (!response.data.success){
           navigate("/login")
         } else{
@@ -64,7 +63,6 @@ const CodeContainer=({selectedCode})=>{
         data.append('code', code)
         data.append('title', code_title) 
         await axios.post('http://localhost:8000/api/v1/save_code', data, token);
- 
       }
     }
     
