@@ -1,5 +1,5 @@
-
 import Chat from "../../components/Chat";
+import './style.css'
 
 const ChatPage = () => {
     return(

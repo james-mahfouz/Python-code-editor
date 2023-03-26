@@ -10,7 +10,7 @@ import SaveButton from '../Buttons/SaveButton';
 
 const CodeContainer=({selectedCode})=>{
   
-    const token = {
+    let token = {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
     };
     const navigate = useNavigate()
@@ -32,14 +32,10 @@ const CodeContainer=({selectedCode})=>{
     const handleClear = () => {setOutput('');};
 
     const handleDownload = async () => {
-      let errorOccurred = false;
-      try {
-        await axios.get("http://localhost:8000/api/v1/verify", token)
-      } catch (error) {
-        navigate("/login")
-        errorOccurred = true;
-      } 
-      if(!errorOccurred){
+        const response = await axios.get("http://localhost:8000/api/v1/verify", token)
+        if (!response.data.success){
+          navigate("/login")
+        } else{
         const blob = new Blob([code], {type: "text/plain;charset=utf-8"});
         const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
@@ -59,22 +55,15 @@ const CodeContainer=({selectedCode})=>{
     }, [selectedCode]);
 
     const save_code = async () => {
-      try {
-        await axios.get("http://localhost:8000/api/v1/verify", token)
-      } catch (error) {
+      const response = await axios.get("http://localhost:8000/api/v1/verify", token)
+      if (!response.data.success){
           navigate("/login")
-      }
+      } else{
         const data = new FormData()
         data.append('code', code)
-        data.append('title', code_title)
-    
-        try {
-            await axios.post('http://localhost:8000/api/v1/save_code', data, token);
-        } catch (error) {
-            console.error(error)
-        }
-      
-  
+        data.append('title', code_title) 
+        await axios.post('http://localhost:8000/api/v1/save_code', data, token);
+      }
     }
     
     return (
@@ -108,4 +97,4 @@ const CodeContainer=({selectedCode})=>{
       );
 }
 
-  export default CodeContainer;
+export default CodeContainer;

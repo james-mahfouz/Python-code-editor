@@ -3,9 +3,9 @@ import './index.css'
 import axios from 'axios';
 
 const Sidebar = ({setSelectedCode})=> {
-    const token = {
-      headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
-  };
+  const token = {
+    headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
+};
   const [savedFiles, setSavedFiles] = useState([]);
   const username = localStorage.getItem('name');
   const [selectedFile, setSelectedFile] = useState(null);
@@ -25,7 +25,6 @@ const Sidebar = ({setSelectedCode})=> {
   const codeStatus =(file)=>{
     let title
     return title = file.title !== ""? file.title: file.code.split(" ").slice(0, 2).join(" ")
-
   }
 
   const handleFileClick = (file) => {

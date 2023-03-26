@@ -13,9 +13,18 @@ use App\Models\Chat;
 class UserController extends Controller
 {
     public function verify(){
-        return response()->json([
+        $user = Auth::user();
+        if ($user){
+            return response()->json([
             "success" => true
-        ]);
+            ]);
+        }
+        else{
+            return response()->json([
+            "success" => false
+            ]);
+        }
+        
     }
 
     public function save_code(Request $request)
@@ -49,7 +58,6 @@ class UserController extends Controller
             'users' => $users
         ]);
     }
-
     public function send_message(Request $request, $to_user_id)
     {
         $text = $request->input('text');
@@ -67,8 +75,19 @@ class UserController extends Controller
         ]);
     }
 
-    
-    
+    public function recieve_message(Request $request, $sender_id)
+    {
+        $user = Auth::user();
+        $message = Chat::select('from', 'text')->where('to', $user->id)->get();
+
+        return response()->json([
+            'success' => true,
+            'data' => $message
+        ]);
+
+  
+    }
+
     public function get_code()
     {
         $user = Auth::user();
