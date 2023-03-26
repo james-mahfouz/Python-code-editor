@@ -22,7 +22,10 @@ function AllUsers() {
         console.error(error);
     });
     }, []);
-
+    
+    return(
+        <div></div>
+    );
 
 
 }
