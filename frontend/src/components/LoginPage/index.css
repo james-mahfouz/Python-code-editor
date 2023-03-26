@@ -1,23 +1,39 @@
 body{
-    margin: 0;
-    padding: 0;
-    background-color: #F2F4FF;
-    font-family: 'Inter';
-    height: 100vh;
-}
-
-.form_container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
     background-color: #fff;
-    width: 500px;
+}
+.logo{
+    width: 8rem;
+    height: auto;
+}
+.signup-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    padding: 2rem;
+    margin: auto;
+    width: 350px;
+    height: fit-content;
+    border: 1px solid black;
 }
 
-form{
+.input-container {
     display: flex;
-    text-align: center;
-    justify-content: center;
-    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+
+.label {
+    font-weight: bold;
+    font-size: 14px;
+    margin-right: 2rem;
+}
+
+.input-field {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid var(--blue);
+    outline: none;
 }

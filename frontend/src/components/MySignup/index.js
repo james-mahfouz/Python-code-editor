@@ -45,14 +45,14 @@ function Signup() {
 
              <div className='signup-container'>
                 <label className='label' htmlFor="email">Email:</label>
-                <input className='input-field' type="email" placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)}/>
+                <input className='input-field' type="email" placeholder='Email' />
             </div><br/>
 
              <div className='signup-container'>
                 <label className='label' htmlFor="name">Name:</label>
-                <input className='input-field pass' type="password" placeholder='Password' value={password} onChange={(e) => setPassword(e.target.value)} />
+                <input className='input-field pass' type="password" placeholder='Password' />
             </div>
-            <SignupButton type="submit" className="signup-btn"/>
+            <SignupButton className="signup-btn"/>
         </form>
         </div><br/>
         </div>

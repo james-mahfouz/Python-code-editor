@@ -2,30 +2,50 @@ import React, { useState } from 'react';
 import ClearButton from '../Buttons/ClearButton';
 import RunButton from '../Buttons/RunButton';
 import './index.css'
+import axios from 'axios';
 
 
 const CodeContainer=()=>{
-
+// const [code, setCode] = useState('');
+// const handleCodeChange = (event) => {
+//   setCode(event.target.value);
+// };
 const [code, setCode] = useState('');
+const [output, setOutput] = useState('');
 
-  const handleCodeChange = (event) => {
-    setCode(event.target.value);
+const handleSubmit = async (e) => {
+        
+  e.preventDefault();
+
+  try {
+      const response = await axios.post('http://localhost:8000/api/v1/compile', { code });
+      setOutput(response.data.output);
+  } catch (error) {
+      console.error(error);
+      alert('Compilation failed. Please try again.');
+  }
   };
+  const handleClear = () => {setOutput('');};
 
-  return (
+
+
+return (
     <div className="code-container">
     
-    <RunButton/>
+    <RunButton onClick={handleSubmit}/>
+
     <div className="code-editor">
       <textarea
         className="code-editor-textarea"
         value={code}
-        onChange={handleCodeChange}
+        onChange={(e) => setCode(e.target.value)}
         placeholder="Write your code here..."
       />
     </div>
-    <ClearButton/>
-    <div className="code-editor output"></div>
+    <ClearButton onClick={handleClear} />
+    <textarea className='code-editor' value={output} readOnly />
+
+    {/* <div className="code-editor output"></div> */}
     </div>
   );
 }
