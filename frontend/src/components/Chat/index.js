@@ -50,7 +50,7 @@ function Chatting() {
         //     </form>
         // </div>
        // <UserList />
-        <></>
+        <>chatting page</>
     );
 }
 
