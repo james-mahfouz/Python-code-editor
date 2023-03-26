@@ -5,7 +5,6 @@ const token = {
 };
 
 function Chatting() {
-    // const [sender, setSender] = useState('');
     const [receiver, setReceiver] = useState('');
     const [text, setMessage] = useState('');
 
@@ -17,13 +16,11 @@ function Chatting() {
             setReceiver(value);
         }
       };
-
     const handleSubmit = async (e) => {
         e.preventDefault();
         const data = new FormData()
         data.append('text', text)
         setReceiver(2)
-
         try {
             await axios.post(`http://localhost:8000/api/v1/chats/${receiver}`, data,token);
     
@@ -34,7 +31,6 @@ function Chatting() {
             alert('Message not sent.');
         }
     };
-
     return (
         <div>
             <form onSubmit={handleSubmit}>
