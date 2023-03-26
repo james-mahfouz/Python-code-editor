@@ -3,6 +3,7 @@ import axios from 'axios';
 import SignupButton from '../Buttons/SignupButton';
 import Logo from '../../images/logo.png'
 import './index.css'
+import NavbarTwo from '../NavbarTwo';
 
 function Signup() {
     const [name, setName] = useState('');
@@ -31,6 +32,8 @@ function Signup() {
     };
 
     return (
+        <div>
+        <NavbarTwo/>    
         <div className='signup-form'>
         <img className='logo' src={Logo} alt="logo" />
         <h1>Create Account</h1><br/>
@@ -42,18 +45,16 @@ function Signup() {
 
              <div className='signup-container'>
                 <label className='label' htmlFor="email">Email:</label>
-                <input className='input-field' type="email" placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)} />
+                <input className='input-field' type="email" placeholder='Email' />
             </div><br/>
 
              <div className='signup-container'>
                 <label className='label' htmlFor="name">Name:</label>
-                <input className='input-field pass' type="password" placeholder='Password' value={password} onChange={(e) => setPassword(e.target.value)}/>
+                <input className='input-field pass' type="password" placeholder='Password' />
             </div>
             <SignupButton className="signup-btn"/>
-            <div className='signup-container'>
-                <label className='label' htmlFor="name">Already have an account?<a href='signup'>Signin</a></label>
-            </div>
         </form>
+        </div><br/>
         </div>
     );
 }

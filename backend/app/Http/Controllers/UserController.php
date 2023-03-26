@@ -27,7 +27,14 @@ class UserController extends Controller
         ]);
     }
 
-    
+    public function get_developers(Request $request)
+    {   
+        $name = $request->name;
+        $users = User::where('name', 'like', '%'.$name.'%')->get();
+        return response()->json([
+            'users' => $users
+        ]);
+    }
 
     public function send_message(Request $request, $to_user_id)
     {
@@ -45,14 +52,7 @@ class UserController extends Controller
             'message' => 'Message sent successfully'
         ]);
     }
-    public function get_developers(Request $request)
-    {   
-        $name = $request->name;
-        $users = User::where('name', 'like', '%'.$name.'%')->get();
-        return response()->json([
-            'users' => $users
-        ]);
-    }
+    
     
     public function get_code()
     {
