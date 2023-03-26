@@ -7,7 +7,6 @@ import LoginPage from './Pages/LoginPage';
 import SignupPage from './Pages/SignupPage';
 import ChatPage from './Pages/ChatPage';
 import SignupButton from './components/Buttons/SignupButton';
-import FormInput from './components/FormInput'
 import NavbarTwo from './components/NavbarTwo';
 import Navbar from './components/Navbar';
 import LandingPage from './Pages/LandingPage';

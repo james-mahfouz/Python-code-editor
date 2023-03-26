@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import FormInput from '../FormInput';
 import SignupButton from '../Buttons/SignupButton';
 import Logo from '../../images/logo.png'
 import './index.css'

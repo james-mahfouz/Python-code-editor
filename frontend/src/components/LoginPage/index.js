@@ -1,6 +1,7 @@
 import React, { useState } from 'react'; 
 import axios from 'axios';
-import Logo from '../FormLogo';
+import LoginButton from '../Buttons/LoginButton';
+import Logo from '../../images/logo.png'
 import "./index.css"
 
 
@@ -25,21 +26,21 @@ const Login = ()=>{
     };
 
     return(
-        <div className='form_container'>
-            <Logo />
-            <h1>Login</h1>
-            <form className='form' onSubmit={handleSubmit}>
-                
-                <div className='input_field'>
-                    <label>Email</label>
-                    <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-                </div>
-                <div className='input_field'>
-                    <label>Password</label>
-                    <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-                </div>
-                <button type="submit">Submit</button>
-            </form>
+        <div className='signup-form'>
+        <img className='logo' src={Logo} alt="logo" />
+        <h1>Create Account</h1><br/>
+        <form onSubmit={handleSubmit}>
+             <div className='signup-container'>
+                <label className='label' htmlFor="email">Email:</label>
+                <input className='input-field' type="email" placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)} />
+            </div><br/>
+
+             <div className='signup-container'>
+                <label className='label' htmlFor="name">Name:</label>
+                <input className='input-field pass' type="password" placeholder='Password' value={password} onChange={(e) => setPassword(e.target.value)}/>
+            </div>
+            <LoginButton className="signup-btn"/>
+        </form>
         </div>
     );
 }

@@ -1,5 +1,4 @@
 
-import FormInput from "../../components/FormInput";
 import MySignup from "../../components/MySignup";
 
 const LoginPage = () => {
