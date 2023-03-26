@@ -41,21 +41,18 @@ function Chatting() {
         <div>
             <form onSubmit={handleSubmit}>
                 <label>
-                    Message:
-                    <input
-                        type="text"
-                        name="text"
-                        value={text}
-                        onChange={handleInputChange} />
-                </label>
-                <br />
-                <label>
-                    Receiver:
+                    To:
                     <input
                         type="text"
                         name="receiver"
                         value={receiver}
                         onChange={handleInputChange} />
+                </label>
+                <br/>
+                <label>
+                    Message:
+                    <textarea name="text" value={text} onChange={handleInputChange}  rows="7" cols="80"></textarea>
+                    
                 </label>
                 <br />
                 <button type="submit">Send Message</button>
