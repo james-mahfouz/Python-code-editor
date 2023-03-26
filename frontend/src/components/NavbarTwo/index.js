@@ -15,14 +15,9 @@ const NavbarTwo=()=> {
     navigate('/chat');
   }
 
-  // const handleLogout = () => {
-  //   localStorage.removeItem('token');
-  //   navigate('/');
-  // };
-
-    const handleLogout = () => {
-    const token = localStorage.getItem('token');
-    axios.post('http://localhost:8000/api/v1/logout', {}, {
+  const handleLogout = () => {
+  const token = localStorage.getItem('token');
+  axios.post('http://localhost:8000/api/v1/logout', {}, {
       headers: {
         Authorization: `Bearer ${token}`
       }
@@ -34,7 +29,8 @@ const NavbarTwo=()=> {
       console.log(error);
     });
   };
-  return (
+
+return (
     <nav className="navbar">
       <div>
         <NavLogo />
