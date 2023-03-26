@@ -30,7 +30,6 @@ const Sidebar = ({setSelectedCode})=> {
 
   const handleFileClick = (file) => {
       setSelectedFile(selectedFile);
-      console.log(selectedFile);
       setSelectedCode(file.code); 
   }
 
