@@ -23,7 +23,7 @@ function Signup() {
 
         try {
         const response = await axios.post('http://localhost:8000/api/v1/auth/signup', data);
-        if(response.data.status == "success"){
+        if(response.data.status === "success"){
             localStorage.setItem('token', response.data.authorisation.token);
             navigate("/landing")
         }
