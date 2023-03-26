@@ -12,7 +12,7 @@ const Navbar = () => {
     navigate("/signup");
   }
 
-  const goSignin =()=>{
+  const goLogin =()=>{
     navigate('/login');
   }
 
@@ -23,7 +23,7 @@ const Navbar = () => {
       </div>
       <div className="navbar-end">
         <SignupButton onClick={goSignup}/>
-        <LoginButton onClick={goSignin}/>
+        <LoginButton onClick={goLogin}/>
       </div>
     </nav>
   );
