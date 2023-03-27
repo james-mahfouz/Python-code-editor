@@ -33,14 +33,6 @@
 <li>As a user, I want the system to apply authentication and middleware classes to ensure that my data and code are secure and that I am authorized to access certain features of the system.</li>
 <li>As an admin, I want to be able to display all users in the system so that I can monitor the activity and ensure that everyone is following the rules.</li>
 
-<!-- <li>As a user, I want to be able to view the products in my cart, their quantities, and their total price so that I can confirm my purchase before checkout.</li>
-<li>As a user, I want to be able to review my order and make any final changes before submitting it so that I can ensure that my order is correct.
-</li>
-<li>As a user, I want to be able to edit my account information such as my name, email, and shipping/billing address so that my orders are delivered correctly.</li>
-<li>As an admin, I want to be able to add/edit/remove products to the website, including their name, description, price, and quantity so that website stays up to date.
-</li>
-<li>As an admin, I want to be able to view a list of registered users on the website and their associated information, so that I can monitor the website's user base.</li><br><br> -->
-
 <h1 align="left">Color Palette:</h1><br>
 <img align="center" src="./frontend/public/color-pallete.png"><br><br>
 
@@ -54,9 +46,7 @@
 | ------------------------------------- | ------------------------------------- | -------------------------------------- |
 | ![Image 1](./frontend/public/Mockups/loginpage.png) | ![Image 2](./frontend/public/Mockups/ressetPassword.png) | ![Image 3](./frontend/public/Mockups/chatpage.png) |
 
-<!-- | Edit profile                          | necklaces                             | rings                                 |
-| ------------------------------------- | ------------------------------------- | ------------------------------------- |
-| ![Image 1](./images/wireframes/4.png) | ![Image 2](./images/wireframes/5.png) | ![Image 3](./images/wireframes/6.png) | -->
+
 
 <br>
 <h1 align="left">Implimentation:</h1><br>
@@ -73,8 +63,7 @@
 | ------------------------------------ | ------------------------------------ | ------------------------------------ |
 | ![Image 1](./images/implement/7.png) | ![Image 2](./images/implement/8.png) | ![Image 3](./images/implement/9.png) |
 
-<br><h1 align="left">Prerequisites:</h1><br>
-
+<br><h1 align="left">Prerequisites:</h1>
 <ul>
 <li>A computer with an internet connection</li>
 <li>A web browser</li>
@@ -86,7 +75,6 @@
 <li>A database management system like MySQL</li>
 
 <br><h1 align="left">Steps:</h1>
-
 <ul>
 <li>Clone Python Code Editor project repository from GitHub onto your local computer using Git command: git clone https://github.com/jamesmahfouz/Python-code-editor.git</li>
 <li>Navigate to the project directory using the terminal or command prompt.</li>
