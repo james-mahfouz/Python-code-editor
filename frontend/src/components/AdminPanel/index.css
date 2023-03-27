@@ -1,20 +1,20 @@
-body{
+body {
     background-color: var(--lightt-blue);
 }
-.admin-logo{
+
+.admin-logo {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0.5rem;
+
 }
+
 .table-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
-    margin: 2.5rem;
-    margin-left: 18rem;
-    width: 45rem;
+    flex-direction: column;
+    width: 100%;
    
 }
 
@@ -43,21 +43,18 @@ body{
     background-color: var(--grayy);
     color: #FFF;
 }
+
 .table td {
     width: 80px;
 }
 
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
     .table-container {
-        width: 100%;
-        margin: 2.5rem 1rem;
+        margin: 2.5rem auto;
+        max-width: 90%;
     }
-}
 
-@media (max-width: 360px) {
-    .table-container {
-        width: 100%;
-        margin: 2.5rem 0.5rem;
-        max-width: 30rem;
+    .table td {
+        width: 50px;
     }
 }

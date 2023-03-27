@@ -2,11 +2,12 @@ import { useState } from "react";
 import axios from "axios";
 import './index.css';
 
-const token ={
-    headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }
-};
+
 
 function SendMessage(){
+    const token ={
+        headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }
+    };
     const recieverId = localStorage.getItem("selectedUserId");
     const [receiver, setReceiver] = useState(recieverId);
 

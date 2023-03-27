@@ -68,8 +68,8 @@ const NavbarTwo=()=> {
             <div onClick={handleSearch}><SearchButton /></div>
             <div className='searched_name' ref={searchedNameRef}>
             {searched_name && searched_name.map((name, index) => (
-                <div key={name.id}>
-                  <div onClick={goChat}> {index}){ name.name }</div><br/>
+                <div key={name.id} className="names_displayed">
+                  <div onClick={goChat}> {index + 1}) { name.name }</div><br/>
                 </div>
               ))}
             </div>
