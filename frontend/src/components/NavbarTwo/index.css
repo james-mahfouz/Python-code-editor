@@ -19,6 +19,8 @@
     .logout{
         margin: 3.3rem;
         margin-left: 70px;
+        width: fit-content;
+        height: auto;
     }
     .navbar-end{
         align-items: center;

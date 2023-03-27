@@ -7,6 +7,7 @@ import LogoutButton from '../Buttons/LogoutButton';
 import '../Navbar/index.css'
 import './index.css'
 import SearchButton from '../Buttons/SearchButton';
+import LogoutIcon from '../Buttons/LogoutIcon';
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
 
@@ -60,7 +61,7 @@ return (
         <div className="navbar-icon">
           <div className="navbar-end">
             <div onClick={goChat}><MessageIcon/></div>
-            <div onClick={handleLogout} className="logout"><MessageIcon /></div>
+            <div onClick={handleLogout} className="logout"><LogoutIcon /></div>
           </div>
         </div>
 
