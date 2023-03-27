@@ -46,3 +46,18 @@ body{
 .table td {
     width: 80px;
 }
+
+@media (max-width: 767px) {
+    .table-container {
+        width: 100%;
+        margin: 2.5rem 1rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .table-container {
+        width: 100%;
+        margin: 2.5rem 0.5rem;
+        max-width: 30rem;
+    }
+}
