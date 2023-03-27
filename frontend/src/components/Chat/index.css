@@ -3,44 +3,55 @@
   padding: 0px;
   box-sizing: border-box;
 }
+/* main container */
 .all-users-container {
   background-color:#7EC8E3;
-  max-width: 400px ;
+  max-width: 220px ;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: start;
   border-radius: 10px;
-  
+  padding-bottom: 10px;
 }
 
+/* title */
 .all-users-container h2 {
   color: #fff;
   font-weight: bold;
-  
+  border-radius: 10px;
   background-color:#0024FF;
   text-align: center;
-  width: 400px;
+  width: 220px;
 }
 
+/* users */
 .all-users-container div {
   margin-left: 10px;
   border-radius: 5px;
-  margin-bottom: 2px;
-  width: 340px;
+  margin-bottom: 4px;
+  width: 190px;
   border: 1px solid black;
-  color: #fff;
+  color: #0024FF;
   font-weight: 600;
   text-align: left;
   font-size: 1.3rem;
   cursor: pointer;
+  background-color: #F2F4FF;
+
+}
+.all-users-container div:hover {
+  background-color: #6ca1e6 ;
 
 }
 
+
+.selected-user {
+  margin-top: 15px;
+  cursor: text;
+  
+}
 .icon {
   width:25px;
   height: auto;
-}
-.selected-user {
-  cursor: text;
 }
