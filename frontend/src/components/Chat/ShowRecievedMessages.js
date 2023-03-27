@@ -22,7 +22,7 @@ function ShowMessages(){
         return (
             <div className="inbox-container">
                 <h2>Show Messages</h2>
-                <button onClick={fetchMessages}>INBOX</button>
+                
                 {messages.length > 0 ? (
                     <ul>
                         {messages.map((message) => (
@@ -34,6 +34,7 @@ function ShowMessages(){
                     ) : (
                     <p>You have no messages.</p>
                     )}
+                    <button className="submit-button" onClick={fetchMessages}>INBOX</button>
             </div>
             );
 }

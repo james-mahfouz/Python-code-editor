@@ -128,9 +128,9 @@
   background-color: #7EC8E3;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 .inbox-container h2 {
   color: #fff;
