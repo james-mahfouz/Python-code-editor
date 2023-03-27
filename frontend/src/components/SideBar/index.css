@@ -3,16 +3,16 @@
     border-radius: 5px;
     margin: 0rem;
     margin-top: 6rem;
-    height: calc(100% - 62px);
+    height: min-content;
     height: 70vh;
     overflow-y: auto;
 }
 
 .sidebar {
-    background-color: #ffff;
+    background-color: var(--lightt-blue);
     padding: 20px;
     box-sizing: border-box;
-    height: 100vh;   
+    height: min-content;   
 }
 
 /* .content {
