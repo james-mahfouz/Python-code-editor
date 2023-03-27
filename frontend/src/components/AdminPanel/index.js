@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import './index.css'
 
 function AdminPanel() {
   const [users, setUsers] = useState([]);
@@ -19,7 +20,8 @@ function AdminPanel() {
   }, []);
 
   return (
-    <table>
+    <div className='table-container'>
+        <table className='table'>
       <thead>
         <tr>
           <th>ID</th>
@@ -37,6 +39,8 @@ function AdminPanel() {
         ))}
       </tbody>
     </table>
+    </div>
+    
   );
 }
 
