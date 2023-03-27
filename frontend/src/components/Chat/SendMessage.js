@@ -62,6 +62,7 @@ function SendMessage(){
             <label>
             Message:
             <input
+                className="message-area"
                 type="text"
                 name="text"
                 value={text}
