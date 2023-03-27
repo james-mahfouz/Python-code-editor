@@ -18,7 +18,7 @@ function ShowMessages(){
             console.error(error);
         }
         };
-
+        fetchMessages()
         return (
             <div className="inbox-conainer">
                 <h2>Show Messages</h2>
