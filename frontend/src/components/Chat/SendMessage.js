@@ -6,7 +6,10 @@ const token ={
 };
 
 function SendMessage(){
-    const [receiver, setReceiver] = useState(1);
+    const recieverId = localStorage.getItem("selectedUserId");
+    const [receiver, setReceiver] = useState(recieverId);
+
+    
     const [text, setText] = useState("");
 
     const handleInputChange = (event) => {
