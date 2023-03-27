@@ -37,17 +37,30 @@
 @media screen and (max-width: 700px) {
     .code-container{
         flex-direction: column;
+        width: 95%;
+        margin: auto;
     }
 
     .code-editor{
         align-items: center;
         margin-top: 10px;
-        width: 90%;
+        width: 100%;
         margin:0;
+        
     }
-
     .code-output{
         height: 300px;
     }
+
+    .left-editor{
+        flex-direction: column;
+        margin-bottom: 50px;
+    }
+
+    .title_input{
+        width: 80%;
+        height: 40px;
+    }
 }
+
   

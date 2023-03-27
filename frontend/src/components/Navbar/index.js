@@ -22,8 +22,8 @@ const Navbar = () => {
         <NavLogo />
       </div>
       <div className="navbar-end">
-        <div onClick={goSignup}><SignupButton /></div>
-        <div onClick={goLogin}><LoginButton onClick={goLogin}/></div>
+        <div onClick={goSignup} className="signin signup"><SignupButton /></div>
+        <div onClick={goLogin} className="signin"><LoginButton /></div>
       </div>
     </nav>
   );

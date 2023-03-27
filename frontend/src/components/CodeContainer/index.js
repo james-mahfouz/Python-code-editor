@@ -91,7 +91,7 @@ const CodeContainer=({selectedCode})=>{
         <div className='left-editor'>
             <div onClick={handleDownload}><DownloadButton/></div> 
             <div onClick={save_code}><SaveButton/></div>
-            <input value={code_title} onChange={(e) => setTitle(e.target.value)} placeholder='enter code title'></input>
+            <input className='title_input' value={code_title} onChange={(e) => setTitle(e.target.value)} placeholder='enter code title'></input>
         </div>
       </div> 
       );
