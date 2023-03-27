@@ -75,7 +75,7 @@ class UserController extends Controller
         ]);
     }
 
-    public function recieve_message(Request $request, $sender_id)
+    public function show_messages()
     {
         $user = Auth::user();
         $message = Chat::select('from', 'text')->where('to', $user->id)->get();
@@ -85,7 +85,7 @@ class UserController extends Controller
             'data' => $message
         ]);
 
-  
+
     }
 
     public function get_code()
