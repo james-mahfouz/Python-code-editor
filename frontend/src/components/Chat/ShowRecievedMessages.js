@@ -18,9 +18,9 @@ function ShowMessages(){
             console.error(error);
         }
         };
-        fetchMessages()
+        // fetchMessages()
         return (
-            <div className="inbox-conainer">
+            <div className="inbox-container">
                 <h2>Show Messages</h2>
                 <button onClick={fetchMessages}>INBOX</button>
                 {messages.length > 0 ? (
