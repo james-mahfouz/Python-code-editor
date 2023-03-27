@@ -10,7 +10,7 @@ class CompileController extends Controller
     {
         $pythonCode = $request->input('code');
         $output = "";
-        exec("python -c '{$pythonCode}' 2> error.log", $outputArray, $returnCode);
+        exec("python -c'{$pythonCode}' 2> error.log", $outputArray, $returnCode);
         foreach ($outputArray as $line) {
             $output .= $line . "\n";
         }
@@ -24,3 +24,4 @@ class CompileController extends Controller
         ]);
     }
 }
+
