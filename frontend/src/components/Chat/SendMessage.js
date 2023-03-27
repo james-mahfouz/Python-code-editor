@@ -72,7 +72,7 @@ function SendMessage(){
             />
             </label>
             <br />
-            <button type="submit">Send Message</button>
+            <button className="submit-button" type="submit">Send Message</button>
         </form>
         </div>
     );
