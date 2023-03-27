@@ -54,6 +54,10 @@ return (
           <div onClick={goChat}><MessageButton/></div>
           <div onClick={handleLogout}><LogoutButton /></div>
         </div>
+        <div className="navbar-end">
+          <div onClick={goChat}><MessageButton/></div>
+          <div onClick={handleLogout}><LogoutButton /></div>
+        </div>
 
     </nav>
   );
