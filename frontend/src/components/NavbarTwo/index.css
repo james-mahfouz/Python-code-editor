@@ -5,12 +5,19 @@
 .navbar-buttons{
     display: block;
 }
+
 .searched_name{
-    padding-left: 20px;
+    margin-top: 5px;
+    border: solid #0024FF 0.5px;
+    padding-top: 5px;
 }
 
 .names_displayed{
     cursor: pointer;
+    margin-left: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: rgba(0,0,0,0.8);
 }
 
 @media screen and (max-width:700px){  
