@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import NavLogo from '../NavLogo';
 import MessageButton from '../Buttons/MessageButton';
 import MessageIcon from '../Buttons/MessageIcon';
@@ -15,6 +15,8 @@ const NavbarTwo=()=> {
   const [name, setName] = useState("")
   const [searched_name, setSearched_name] = useState("")
   const navigate = useNavigate();
+  const searchedNameRef = useRef(null);
+
 
   const goChat =()=>{
     navigate('/chat');
@@ -41,11 +43,22 @@ const NavbarTwo=()=> {
     {
       headers: {Authorization: `Bearer ${localStorage.getItem('token')}`
     }})
-    console.log(response.data.users)
     setSearched_name(response.data.users)
   }
-  
-return (
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (searchedNameRef.current && !searchedNameRef.current.contains(event.target)) {
+        setSearched_name([]);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+  return (
     <nav className="navbar">
       <div>
         <NavLogo />
@@ -53,10 +66,10 @@ return (
         <div className='search-bar'>
           <input className='search-input' type="text" placeholder='SEARCH...' value={name} onChange={(e) => setName(e.target.value)} />
             <div onClick={handleSearch}><SearchButton /></div>
-            <div className='searched_name'>
+            <div className='searched_name' ref={searchedNameRef}>
             {searched_name && searched_name.map((name, index) => (
                 <div key={name.id}>
-                  <div onClick={() => navigate("/chat")}> {index}){ name.name }</div><br/>
+                  <div onClick={goChat}> {index}){ name.name }</div><br/>
                 </div>
               ))}
             </div>
