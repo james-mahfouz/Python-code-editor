@@ -45,7 +45,7 @@ function SendMessage(){
 
         
     return (
-        <div class="send-message-container">
+        <div className="send-message-container">
         <h2>Send Message</h2>
         <form onSubmit={handleSubmit}>
             <label>
