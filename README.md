@@ -1,92 +1,94 @@
-<h1 align="center">Online Python Compiler</h1>
-<h3 align="center">An e-commerce jewellery website where customers can browse and purchase a variety of jewellery items. The website typically displays products in categories such as necklaces, bracelets, earrings and rings. The website usually features high-quality product images and detailed descriptions, as well as customer reviews.</h3>
+ <h1 align="center">Online Python Compiler</h1>
+<h3 align="center">An online python compiler that allows user to write their python codes and run them. It allows authenticated users to save and download their code as they can chat with other developers. In addition, the admin can display the users of the website.</h3>
 <h3 align="left">Languages and Tools:</h3>
 <p align="left"> <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a> <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> <a href="https://www.mysql.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/> </a> <a href="https://www.php.net" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg" alt="php" width="40" height="40"/> </a> </p>
 
-
-- 👨‍💻 Authors:  Hassan Bachir
-
-
+- 👨‍💻 Authors: Hassan Bachir, James Mahfouz, Rima AbouChacra, Mariam Saleh
 
 - 📫 How to reach out to Hassan Bachir **hassan.bachir001@gmail.com**
+- 📫 How to reach out to James Mahfouz **jamesmahfouz0@gmail.com**
+- 📫 How to reach out to Rima AbouChacra **rima.abouchakra.gms@gmail.com**
+- 📫 How to reach out to Mariam Saleh **mariamadnansaleh@gmail.com**
 
-- 🌱 Date: 06-March-2023
+
+
+- 🌱 Date: 28-March-2023
 
 - 📝 References used in the project:
 
-- <ul><li><a href="https://youtu.be/mxHoPYFsTuk">Web Dev Simplified</a>
+- <ul><li><a href="https://laravel.com/docs/10.x">Get started with Laravel</a>
   </li>
-  <li><a href="https://youtu.be/Iy7oFI76FpE" >Abdelrahman Gamal</a></li>
-  <li><a href="https://youtu.be/JttTcnidSdQ">Traversy Media</a></li>
+  <li><a href="https://www.w3schools.com/REACT/DEFAULT.ASP" >React Tutorial</a></li>
   </ul><br>
 
 <h1 align="left">User Stories</h1>
-<ul><li>As a registered user, I want to be able to login to the website with my email address and password so that I can access my account and make purchases.</li>
-<li>As an unregistered user, I want to be able to create a new account on the website with my email address, password, name, and shipping/billing address so that I can make purchases and have them delivered to me.</li>
-<li>As a user, I want to be able to reset my password if I forget it by providing my email address and following a password reset process so that I can access my account and make purchases.</li>
-<li>As a user, I want to be able to view a list of available products  so that I can find what i am looking for.</li>
-<li>As a user, I want to be able to add products to my wish list for future reference so that I can easily find find them later.</li>
-<li>As a user, I want to be able to remove products from my cart or change the quantity of products in my cart so that I can adjust my purchase as needed.</li>
-<li>As a user, I want to be able to view detailed information about a specific product, including its name, description, price, and images so that I can make an informed decision about purchasing the product.</li>
-<li>As a user, I want to be able to view the products in my cart, their quantities, and their total price so that I can confirm my purchase before checkout.</li>
+<ul>
+<li>As a user, I want to be able to navigate a landing page, log in to the system, write Python code, and compile it, so that I can work on my code and see the results..</li>
+<li>As a user, I want to be able to search for other developers on the system, so that I can connect with them and collaborate on projects.</li>
+
+<li>As a user, I want to be able to save my source codes, so that I can access them later and continue working on my projects.</li>
+
+<li>As a user, I want to be able to download my saved source codes so that I can have a local copy of my work and access it offline.</li>
+<li>As a user, I want to be able to chat with other developers on the system so that I can communicate with them about our projects and collaborate more efficiently.</li>
+<li>As a user, I want the system to apply authentication and middleware classes to ensure that my data and code are secure and that I am authorized to access certain features of the system.</li>
+<li>As an admin, I want to be able to display all users in the system so that I can monitor the activity and ensure that everyone is following the rules.</li>
+
+<!-- <li>As a user, I want to be able to view the products in my cart, their quantities, and their total price so that I can confirm my purchase before checkout.</li>
 <li>As a user, I want to be able to review my order and make any final changes before submitting it so that I can ensure that my order is correct.
 </li>
 <li>As a user, I want to be able to edit my account information such as my name, email, and shipping/billing address so that my orders are delivered correctly.</li>
 <li>As an admin, I want to be able to add/edit/remove products to the website, including their name, description, price, and quantity so that website stays up to date.
 </li>
-<li>As an admin, I want to be able to view a list of registered users on the website and their associated information, so that I can monitor the website's user base.</li><br><br>
-
-
-
+<li>As an admin, I want to be able to view a list of registered users on the website and their associated information, so that I can monitor the website's user base.</li><br><br> -->
 
 <h1 align="left">Color Palette:</h1><br>
-<img align="center" src="./images/palette1.png"><br><br>
+<img align="center" src="./frontend/public/color-pallete.png"><br><br>
 
-<h1 align="left">Wireframes:</h1><br>
+<h1 align="left">Mockups:</h1><br>
 
-| main page | Earings | chekkout |
-| --- | --- | --- |
-| ![Image 1](./images/wireframes/1.png) | ![Image 2](./images/wireframes/2.png) | ![Image 3](./images/wireframes/3.png) |
+| main page                             | Landing page                          | signup                              |
+| ------------------------------------- | ------------------------------------- | ------------------------------------- |
+| ![Image 1](./frontend/public/Mockups/mainpage.png) | ![Image 2](./frontend/public/Mockups/landingpage.png) | ![Image 3](./frontend/public/Mockups/signupPage.png) |
 
-| login | sign up | admin page |
-| --- | --- | --- |
-| ![Image 1](./images/wireframes/8.png) | ![Image 2](./images/wireframes/9.png) | ![Image 3](./images/wireframes/10.png) |
+| login                                 | Reset password                              | chat page page                             |
+| ------------------------------------- | ------------------------------------- | -------------------------------------- |
+| ![Image 1](./frontend/public/Mockups/loginpage.png) | ![Image 2](./frontend/public/Mockups/ressetPassword.png) | ![Image 3](./frontend/public/Mockups/chatpage.png) |
 
-
-| Edit profile | necklaces | rings |
-| --- | --- | --- |
-| ![Image 1](./images/wireframes/4.png) | ![Image 2](./images/wireframes/5.png) | ![Image 3](./images/wireframes/6.png) |
+<!-- | Edit profile                          | necklaces                             | rings                                 |
+| ------------------------------------- | ------------------------------------- | ------------------------------------- |
+| ![Image 1](./images/wireframes/4.png) | ![Image 2](./images/wireframes/5.png) | ![Image 3](./images/wireframes/6.png) | -->
 
 <br>
 <h1 align="left">Implimentation:</h1><br>
 
-
-| Main page | Main page | Main page |
-| --- | --- | --- |
+| Main page                            | Main page                            | Main page                            |
+| ------------------------------------ | ------------------------------------ | ------------------------------------ |
 | ![Image 1](./images/implement/1.png) | ![Image 2](./images/implement/2.png) | ![Image 3](./images/implement/3.png) |
 
-
-| necklaces | sigup | login |
-| --- | --- | --- |
+| necklaces                            | sigup                                | login                                |
+| ------------------------------------ | ------------------------------------ | ------------------------------------ |
 | ![Image 1](./images/implement/4.png) | ![Image 2](./images/implement/5.png) | ![Image 3](./images/implement/6.png) |
 
-
-| cart | admin panel | Earings |
-| --- | --- | --- |
+| cart                                 | admin panel                          | Earings                              |
+| ------------------------------------ | ------------------------------------ | ------------------------------------ |
 | ![Image 1](./images/implement/7.png) | ![Image 2](./images/implement/8.png) | ![Image 3](./images/implement/9.png) |
 
 <br><h1 align="left">Prerequisites:</h1><br>
+
 <ul>
 <li>A computer with an internet connection</li>
 <li>A web browser</li>
 <li>Git installed on your computer</li>
 <li>A code editor such as Visual Studio Code</li>
+<li>Composer installed on your computer</li>
+<li>node.js installed on your computer</li>
 <li>A local web server like Apache installed on your computer</li>
 <li>A database management system like MySQL</li>
 
 <br><h1 align="left">Steps:</h1>
+
 <ul>
-<li>Clone the ecommerce project repository from GitHub onto your local computer using Git command: git clone https://github.com/ecommerce_project.git</li>
+<li>Clone Python Code Editor project repository from GitHub onto your local computer using Git command: git clone https://github.com/jamesmahfouz/Python-code-editor.git</li>
 <li>Navigate to the project directory using the terminal or command prompt.</li>
 <li>Open the project in your code editor.</li>
 <li>Now you can run the project</li>
