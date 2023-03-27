@@ -11,6 +11,7 @@
   justify-content: center;
   align-items: start;
   border-radius: 10px;
+  
 }
 
 .all-users-container h2 {
@@ -23,7 +24,11 @@
 }
 
 .all-users-container div {
-  padding-left: 10px;
+  margin-left: 10px;
+  border-radius: 5px;
+  margin-bottom: 2px;
+  width: 340px;
+  border: 1px solid black;
   color: #fff;
   font-weight: 600;
   text-align: left;
@@ -31,6 +36,7 @@
   cursor: pointer;
 
 }
+
 .icon {
   width:25px;
   height: auto;
