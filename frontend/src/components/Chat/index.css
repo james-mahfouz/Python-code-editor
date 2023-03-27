@@ -105,15 +105,19 @@
   min-height: 200px;
 }
 .submit-button {
-  
-  /* background-color: #0024FF;
+  height: 30px;
   color: white;
-  font-weight: bold;
-  width: 8rem;
-  height: 3rem;
-  font-size: 16px;
-  border: none;
+  background-color: #0024FF;
   border-radius: 0.8rem;
-  margin: 2rem;
-  cursor: pointer; */
+  font-weight: bold;
+  cursor: pointer;
+  
+}
+.submit-button:hover{
+  background-color: #4a62ff;
+}
+.submit-button:active{
+  background-color: #7c8eff;
+  color: grey;
+
 }
