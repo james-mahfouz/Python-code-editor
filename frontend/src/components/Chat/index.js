@@ -2,17 +2,18 @@ import React from 'react';
 import AllUsers from './AllUsers';
 import SendMessage from './SendMessage';
 import ShowMessages from './ShowRecievedMessages';
+import './index.css'
 
 
 
 function Chatting() {
 
     return (
-        <>
+        <div class="body">
         <AllUsers />
         <SendMessage/>
         <ShowMessages/>
-        </>
+        </div>
     
     );
 }
