@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import './index.css'
+import './index.css';
 
 const token ={
     headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }

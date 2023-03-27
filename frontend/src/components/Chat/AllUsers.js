@@ -1,6 +1,6 @@
 import { useState , useEffect } from "react";
 import axios from 'axios';
-import './index.css'
+import './index.css';
 
 
 function AllUsers() {
@@ -35,7 +35,7 @@ function AllUsers() {
         }, [selectedUser]);
         
     return(
-        <div className="all-users-container">
+        <div className="show-users-container">
             <h2>Select Developer to Message</h2>
             {
                 users.length > 0 ? ( users.map((user) => (
@@ -44,7 +44,7 @@ function AllUsers() {
                     <div>Loading users...</div>
                     )}
                     {selectedUser && 
-                    <div class="selected-user">Selected User ID: {selectedUser}</div>}
+                    <div >Selected User ID: {selectedUser}</div>}
             
 
         </div>
