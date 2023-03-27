@@ -6,7 +6,7 @@ const token ={
 };
 
 function SendMessage(){
-    const [receiver, setReceiver] = useState("");
+    const [receiver, setReceiver] = useState(1);
     const [text, setText] = useState("");
 
     const handleInputChange = (event) => {
