@@ -6,14 +6,19 @@ import Sidebar from "../../components/SideBar";
 import './index.css'
 
 const LandingPage = () => {
-    const username = 'JohnDoe';
-    const savedFiles = ['file1.txt', 'file2.doc', 'file3.jpg'];
     const [selectedCode, setSelectedCode] = useState(null);
+    const [showSidebar, setShowSidebar] = useState(false);
+    const toggleSidebar = () => setShowSidebar(!showSidebar);
     return(
         <div>
             <NavbarTwo/>
             <div className="landing-body">
-                <Sidebar  setSelectedCode={setSelectedCode}/>
+                <div className='sidebar'>
+                    <button onClick={toggleSidebar} className="toggle_button">Toggle Sidebar</button> 
+                    <div className='sidebar_files'>
+                        {showSidebar && <Sidebar setSelectedCode={setSelectedCode}/>} 
+                    </div>    
+                </div>    
                 <div>
                     <CodeContainer selectedCode={selectedCode}/>
                 </div>

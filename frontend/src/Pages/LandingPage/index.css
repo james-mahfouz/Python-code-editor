@@ -18,3 +18,8 @@
     flex-shrink: 0;
 }
 
+.sidebar{
+    width: min-content;
+    height: min-content;
+}
+
