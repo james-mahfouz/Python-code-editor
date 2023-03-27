@@ -4,13 +4,13 @@ import NavLogo from '../NavLogo';
 import MessageButton from '../Buttons/MessageButton';
 import LogoutButton from '../Buttons/LogoutButton';
 import '../Navbar/index.css'
+import './index.css'
 import SearchButton from '../Buttons/SearchButton';
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
 
 const NavbarTwo=()=> {
   const [name, setName] = useState("")
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navigate = useNavigate();
 
   const goChat =()=>{
@@ -39,10 +39,6 @@ const NavbarTwo=()=> {
       headers: {Authorization: `Bearer ${localStorage.getItem('token')}`
     }})
     console.log(response.data)
-  }
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
   }
   
 return (
