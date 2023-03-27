@@ -27,6 +27,7 @@
     width: 3.2rem;
     height: 3.1rem;
     margin: -3.3rem;
+    padding: 0;
 }
 
 .btn-image{
@@ -36,4 +37,11 @@
     gap: 0.5rem;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
+}
+
+.logout_icon{
+    width: 1.5rem;
+    height: 1.5rem;
+    justify-self: center;
+    align-self: center;
 }
