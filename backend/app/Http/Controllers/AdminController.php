@@ -11,7 +11,7 @@ class AdminController extends Controller
     {
         $user = Auth::user();
 
-        if($user->is_admin==1){
+        if($user->is_admin===1){
             $users = User::select()->where('id', '!=', $user->id)->get();
             return response()->json([
                 'users' => $users
