@@ -13,12 +13,12 @@ const LandingPage = () => {
         <div>
             <NavbarTwo/>
             <div className="landing-body">
-                <div className='sidebar'>
+                <div>
                     <button onClick={toggleSidebar} className="toggle_button">Toggle Sidebar</button> 
-                    <div className='sidebar_files'>
+                    <div className='sidebar'>
                         {showSidebar && <Sidebar setSelectedCode={setSelectedCode}/>} 
-                    </div>    
-                </div>    
+                    </div>     
+                </div>      
                 <div>
                     <CodeContainer selectedCode={selectedCode}/>
                 </div>
