@@ -1,6 +1,6 @@
 import { useState , useEffect } from "react";
 import axios from 'axios';
-import './index.css';
+import './index.css'
 
 
 function AllUsers() {
@@ -15,7 +15,7 @@ function AllUsers() {
     useEffect(()=>{
         const fetchData = async () => {
             try{
-                const response = await axios.get('http://localhost:8000/api/v1/get_all_user', token);
+                const response = await axios.get('http://localhost:8000/api/v1/get_all_user_user', token);
                 setUsers(response.data.users);
 
             }catch (e) {
@@ -35,16 +35,16 @@ function AllUsers() {
         }, [selectedUser]);
         
     return(
-        <div className="show-users-container">
+        <div className="all-users-container">
             <h2>Select Developer to Message</h2>
             {
                 users.length > 0 ? ( users.map((user) => (
                     <div key={user.id} onClick={() => handleUserClick(user.id)} > {user.name} </div>
-                )))  : (
+                        )))  : (
                     <div>Loading users...</div>
-                    )}
-                    {/* {selectedUser && 
-                    <div >Selected User: {selectedUser.name}</div>} */}
+            )}
+                    {selectedUser && 
+                    <div className="selected-user">Selected User ID: {selectedUser}</div>}
             
 
         </div>
