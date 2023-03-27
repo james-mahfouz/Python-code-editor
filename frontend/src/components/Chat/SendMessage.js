@@ -10,7 +10,7 @@ function SendMessage(){
     };
     const recieverId = localStorage.getItem("selectedUserId");
     const [receiver, setReceiver] = useState(recieverId);
-    
+    const[status,setStatus]=useState('')
     
     const [text, setText] = useState("");
 
@@ -33,10 +33,11 @@ function SendMessage(){
             data,
             token
             );
-    
+            setStatus('Message sent successfully!')
             alert("Message sent successfully!");
         } catch (error) {
             console.log(error);
+            setStatus('Message not sent.')
             alert("Message not sent.");
         }
         };
@@ -46,21 +47,21 @@ function SendMessage(){
         
     return (
         <div className="send-message-container">
-        <h2>Send Message</h2>
+        {/* <h2>Send Message</h2> */}
         <form onSubmit={handleSubmit}>
             <label>
-            Receiver ID:
+            {/* Receiver ID: */}
             <input
                 type="text"
                 name="receiver"
-                value={selectedUserId}
+                value={status}
                 onChange={handleInputChange}
                 disabled
             />
             </label>
             <br />
             <label>
-            Message:
+            {/* Message: */}
             <input
                 className="message-area"
                 type="text"
