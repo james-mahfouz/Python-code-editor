@@ -1,6 +1,8 @@
 import { useState , useEffect } from "react";
 import axios from 'axios';
 import './index.css'
+import pngegg from '../../images/pngegg.png'
+
 
 
 function AllUsers() {
@@ -39,7 +41,7 @@ function AllUsers() {
             <h2>Select Developer to Message</h2>
             {
                 users.length > 0 ? ( users.map((user) => (
-                    <div key={user.id} onClick={() => handleUserClick(user.id)} > {user.name} </div>
+                    <div key={user.id} onClick={() => handleUserClick(user.id)} ><img className="icon" src={pngegg}></img> {user.name} </div>
                         )))  : (
                     <div>Loading users...</div>
             )}

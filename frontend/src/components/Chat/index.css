@@ -9,18 +9,32 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: start;
+  border-radius: 10px;
 }
 
 .all-users-container h2 {
+  color: #fff;
+  font-weight: bold;
   
   background-color:#0024FF;
+  text-align: center;
+  width: 400px;
 }
 
 .all-users-container div {
-  
-}
+  padding-left: 10px;
+  color: #fff;
+  font-weight: 600;
+  text-align: left;
+  font-size: 1.3rem;
+  cursor: pointer;
 
+}
+.icon {
+  width:25px;
+  height: auto;
+}
 .selected-user {
-  
+  cursor: text;
 }
