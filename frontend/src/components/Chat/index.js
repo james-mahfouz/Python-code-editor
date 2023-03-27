@@ -1,6 +1,7 @@
 import React from 'react';
 import AllUsers from './AllUsers';
 import SendMessage from './SendMessage';
+import ShowMessages from './ShowRecievedMessages';
 
 
 
@@ -10,6 +11,7 @@ function Chatting() {
         <>
         <AllUsers />
         <SendMessage/>
+        <ShowMessages/>
         </>
     
     );

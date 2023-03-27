@@ -21,12 +21,18 @@ function ShowMessages(){
         return (
             <div>
                 <h2>Show Messages</h2>
-                <button onClick={fetchMessages}>Fetch Messages</button>
-                <ul>
-                {messages.map((message) => (
-                    <li key={`${message.from}-${message.text}`}>{message.from}: {message.text}</li>
-                ))}
-                </ul>
+                <button onClick={fetchMessages}>INBOX</button>
+                {messages.length > 0 ? (
+                    <ul>
+                        {messages.map((message) => (
+                        <li key={`${message.from}-${message.text}`}>
+                            {`From: ${message.from}, Text: ${message.text}`}
+                        </li>
+                        ))}
+                    </ul>
+                    ) : (
+                    <p>You have no messages.</p>
+                    )}
             </div>
             );
 }
