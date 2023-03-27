@@ -37,7 +37,7 @@
 
 .title_input{
     height: 40px;
-
+    border: solid #0024FF;
     border-radius: 10px;
 }
 
