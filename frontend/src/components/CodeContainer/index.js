@@ -83,8 +83,8 @@ const CodeContainer=({selectedCode})=>{
           
         </div>
         
-        <ClearButton onClick={handleClear} />
-        <textarea className='code-editor' value={output} readOnly />
+          <ClearButton onClick={handleClear} />
+          <textarea className='code-editor code-output' value={output} readOnly />
 
  
         </div>

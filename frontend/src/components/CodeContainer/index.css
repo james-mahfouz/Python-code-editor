@@ -19,7 +19,6 @@
     margin-top: 6rem;
     margin-left: -8.5rem;
     overflow: auto;
-
 }
 .output{
     background-color: var(--grayy);
@@ -34,3 +33,21 @@
     outline: none;
     border-radius: 3px;
 }
+
+@media screen and (max-width: 700px) {
+    .code-container{
+        flex-direction: column;
+    }
+
+    .code-editor{
+        align-items: center;
+        margin-top: 10px;
+        width: 90%;
+        margin:0;
+    }
+
+    .code-output{
+        height: 300px;
+    }
+}
+  
