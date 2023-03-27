@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import AllUsers from './AllUsers';
+import SendMessage from './SendMessage';
 
 const token = {
     headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
@@ -49,7 +50,10 @@ function Chatting() {
         //         <button type="submit">Send Message</button>
         //     </form>
         // </div>
+        <>
         <AllUsers />
+        <SendMessage/>
+        </>
         // <>chatting page</>
     );
 }
