@@ -22,8 +22,9 @@ function AdminPanel() {
 
   return (
     <div>
+      <div className='table-container'>
         <div className='admin-logo'><AdminLogo/></div>
-        <div className='table-container'>
+        
         <table className='table'>
       <thead>
         <tr>
