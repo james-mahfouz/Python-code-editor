@@ -1,10 +1,11 @@
+.container{
+    width: 80%;
+}
 .landing-body{
     display: flex;
     flex-direction: row;
-
     width: 100%;
-    margin: 0;
-    
+    margin: 0; 
 }
 .landing-body>*:first-child {
     flex-basis: 12%;
@@ -18,3 +19,7 @@
     flex-shrink: 0;
 }
 
+.seidebar{
+    width: min-content;
+    height: min-content;
+}
