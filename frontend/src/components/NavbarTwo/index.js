@@ -7,8 +7,6 @@ import '../Navbar/index.css'
 import SearchButton from '../Buttons/SearchButton';
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 const NavbarTwo=()=> {
   const [name, setName] = useState("")
@@ -48,42 +46,20 @@ const NavbarTwo=()=> {
   }
   
 return (
-  <nav className="navbar">
-  <div>
-    <NavLogo />
-  </div>
-  <div className="navbar-end">
-    <div className="menu-icon" onClick={toggleMenu}>
-      <span><FontAwesomeIcon icon={faBars} /></span>
-      <span></span>
-      <span></span>
-    </div>
-    {isMenuOpen && (
-      <div className="navbar-menu">
-        <div className="search-bar">
-          <input
-            className="search-input"
-            type="text"
-            placeholder="SEARCH..."
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
-          <div onClick={handleSearch}>
-              <SearchButton />
-            </div>
-          </div>
-          <div className="navbar-end">
-            <div onClick={goChat}>
-              <MessageButton />
-            </div>
-            <div onClick={handleLogout}>
-              <LogoutButton />
-            </div>
-          </div>
+    <nav className="navbar">
+      <div>
+        <NavLogo />
+      </div>
+        <div className='search-bar'>
+          <input className='search-input' type="text" placeholder='SEARCH...' value={name} onChange={(e) => setName(e.target.value)} />
+          <div onClick={handleSearch}><SearchButton /></div>
         </div>
-      )}
-    </div>
-  </nav>
+        <div className="navbar-end">
+          <div onClick={goChat}><MessageButton/></div>
+          <div onClick={handleLogout}><LogoutButton /></div>
+        </div>
+
+    </nav>
   );
 }
 
