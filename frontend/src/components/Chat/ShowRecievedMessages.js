@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import './index.css';
 
 function ShowMessages(){
     const [messages, setMessages] = useState([]);
@@ -19,7 +20,7 @@ function ShowMessages(){
         };
 
         return (
-            <div>
+            <div className="inbox-conainer">
                 <h2>Show Messages</h2>
                 <button onClick={fetchMessages}>INBOX</button>
                 {messages.length > 0 ? (
