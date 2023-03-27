@@ -8,7 +8,7 @@ import SearchButton from '../Buttons/SearchButton';
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUser } from '@fortawesome/free-solid-svg-icons'
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 const NavbarTwo=()=> {
   const [name, setName] = useState("")
@@ -54,7 +54,7 @@ return (
   </div>
   <div className="navbar-end">
     <div className="menu-icon" onClick={toggleMenu}>
-      <span></span>
+      <span><FontAwesomeIcon icon={faBars} /></span>
       <span></span>
       <span></span>
     </div>
