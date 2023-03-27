@@ -10,6 +10,7 @@ import SearchButton from "./SearchButton"
 import SignupButton2 from "./SignupButton2";
 import SaveButton from "./SaveButton";
 import MessageIcon from "./MessageIcon";
+import LogoutIcon from "./LogoutIcon";
 
 export { 
     LoginButton, 
@@ -23,5 +24,6 @@ export {
     SearchButton,
     SignupButton2,
     SaveButton,
-    MessageIcon
+    MessageIcon,
+    LogoutIcon
 };
