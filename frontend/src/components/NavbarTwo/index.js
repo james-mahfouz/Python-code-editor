@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import NavLogo from '../NavLogo';
 import MessageButton from '../Buttons/MessageButton';
+import MessageIcon from '../Buttons/MessageIcon';
 import LogoutButton from '../Buttons/LogoutButton';
 import '../Navbar/index.css'
 import './index.css'
@@ -50,13 +51,17 @@ return (
           <input className='search-input' type="text" placeholder='SEARCH...' value={name} onChange={(e) => setName(e.target.value)} />
           <div onClick={handleSearch}><SearchButton /></div>
         </div>
-        <div className="navbar-end">
-          <div onClick={goChat}><MessageButton/></div>
-          <div onClick={handleLogout}><LogoutButton /></div>
+        <div className='navbar-buttons'>
+          <div className="navbar-end">
+            <div onClick={goChat}><MessageButton/></div>
+            <div onClick={handleLogout}><LogoutButton /></div>
+          </div>
         </div>
-        <div className="navbar-end">
-          <div onClick={goChat}><MessageButton/></div>
-          <div onClick={handleLogout}><LogoutButton /></div>
+        <div className="navbar-icon">
+          <div className="navbar-end">
+            <div onClick={goChat}><MessageIcon/></div>
+            <div onClick={handleLogout} className="logout"><MessageIcon /></div>
+          </div>
         </div>
 
     </nav>

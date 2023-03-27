@@ -35,7 +35,7 @@ function AllUsers() {
         }, [selectedUser]);
         
     return(
-        <div class="all-users-container">
+        <div className="all-users-container">
             <h2>Select Developer to Message</h2>
             {
                 users.length > 0 ? ( users.map((user) => (

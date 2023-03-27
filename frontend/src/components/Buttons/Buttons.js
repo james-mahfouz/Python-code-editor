@@ -9,6 +9,7 @@ import DownloadButton from "./DownloadButton";
 import SearchButton from "./SearchButton"
 import SignupButton2 from "./SignupButton2";
 import SaveButton from "./SaveButton";
+import MessageIcon from "./MessageIcon";
 
 export { 
     LoginButton, 
@@ -21,5 +22,6 @@ export {
     DownloadButton,
     SearchButton,
     SignupButton2,
-    SaveButton 
+    SaveButton,
+    MessageIcon
 };
