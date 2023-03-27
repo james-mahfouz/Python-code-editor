@@ -35,6 +35,40 @@ function SendMessage(){
             alert("Message not sent.");
         }
         };
+        
+        const selectedUserId = localStorage.getItem("selectedUserId");
 
         
+    return (
+        <div>
+        <h2>Send Message</h2>
+        <form onSubmit={handleSubmit}>
+            <label>
+            Receiver ID:
+            <input
+                type="text"
+                name="receiver"
+                value={selectedUserId}
+                onChange={handleInputChange}
+                disabled
+            />
+            </label>
+            <br />
+            <label>
+            Message:
+            <input
+                type="text"
+                name="text"
+                value={text}
+                onChange={handleInputChange}
+            />
+            </label>
+            <br />
+            <button type="submit">Send Message</button>
+        </form>
+        </div>
+    );
+
 }
+
+export default SendMessage;
