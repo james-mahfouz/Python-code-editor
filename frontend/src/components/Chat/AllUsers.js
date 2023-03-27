@@ -35,7 +35,7 @@ function AllUsers() {
         }, [selectedUser]);
         
     return(
-        <div>
+        <div class="all-users-container">
             <h2>Select Developer to Message</h2>
             {
                 users.length > 0 ? ( users.map((user) => (
@@ -43,7 +43,8 @@ function AllUsers() {
                 )))  : (
                     <div>Loading users...</div>
                     )}
-                    {selectedUser && <div>Selected User ID: {selectedUser}</div>}
+                    {selectedUser && 
+                    <div class="selected-user">Selected User ID: {selectedUser}</div>}
             
 
         </div>

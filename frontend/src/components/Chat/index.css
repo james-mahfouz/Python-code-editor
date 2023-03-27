@@ -1,0 +1,31 @@
+/* all users style */
+:root { 
+    --blue: #0024FF;
+    --grayy: #676767;
+    --lightt-blue: #F2F4FF
+    }
+body {
+    background-color: #f2f2f2;
+  }
+  
+  h2 {
+    color:  --blue;
+  }
+  
+  div {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #d9eaff;
+    margin: 5px 0;
+    cursor: pointer;
+  }
+  
+  div:hover {
+    background-color: --lightt-blue;
+  }
+  
+  .selected-user {
+    color: --blue;
+    font-weight: bold;
+  }
+ 
