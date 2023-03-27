@@ -1,5 +1,6 @@
 import { useState , useEffect } from "react";
 import axios from 'axios';
+import './index.css'
 
 
 function AllUsers() {
@@ -32,7 +33,7 @@ function AllUsers() {
         
     return(
         <div>
-            <h2>Select Developer to Chat</h2>
+            <h2>Select Developer to Message</h2>
             {
                 users.length > 0 ? ( users.map((user) => (
                     <div key={user.id} onClick={() => handleUserClick(user.id)} > {user.name} </div>
