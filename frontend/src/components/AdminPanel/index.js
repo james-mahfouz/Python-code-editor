@@ -13,7 +13,7 @@ function AdminPanel() {
     })
       .then(response => {
         console.log(response.data)
-        setUsers(response.data.users);
+        setUsers(response.data);
       })
       .catch(error => {
         console.log(error);
@@ -34,13 +34,19 @@ function AdminPanel() {
         </tr>
       </thead>
       <tbody>
-        {users.map(user => (
-          <tr key={user.id}>
-            <td>{user.id}</td>
-            <td>{user.name}</td>
-            <td>{user.email}</td>
+      {users && users.users && users.users.length > 0 ? (
+          users.users.map(user => (
+            <tr key={user.id}>
+              <td>{user.id}</td>
+              <td>{user.name}</td>
+              <td>{user.email}</td>
+            </tr>
+          ))
+        ) : (
+          <tr>
+            <td colSpan="3">You are not the admin.</td>
           </tr>
-        ))}
+        )}
       </tbody>
     </table>
     </div>
