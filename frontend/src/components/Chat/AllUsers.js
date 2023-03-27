@@ -30,6 +30,9 @@ function AllUsers() {
         };
 
 
+        useEffect(() => {
+            localStorage.setItem("selectedUserId", selectedUser);
+        }, [selectedUser]);
         
     return(
         <div>
