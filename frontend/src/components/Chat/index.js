@@ -9,7 +9,7 @@ import './index.css'
 function Chatting() {
 
     return (
-        <div class="body">
+        <div className='main-page'>
         <AllUsers />
         <SendMessage/>
         <ShowMessages/>
