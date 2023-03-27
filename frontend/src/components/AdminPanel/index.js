@@ -5,8 +5,12 @@ function AdminPanel() {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    axios.post('http://localhost:8000/api/v1/get_all_user')
+    axios.get('http://localhost:8000/api/v1/get_all_user', 
+    {
+      headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
+    })
       .then(response => {
+        console.log(response.data)
         setUsers(response.data);
       })
       .catch(error => {
