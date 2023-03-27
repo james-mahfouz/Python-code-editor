@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import './index.css'
 
 const token ={
     headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }
@@ -43,7 +44,7 @@ function SendMessage(){
 
         
     return (
-        <div>
+        <div class="send-message-container">
         <h2>Send Message</h2>
         <form onSubmit={handleSubmit}>
             <label>
