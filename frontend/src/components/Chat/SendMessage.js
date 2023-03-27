@@ -61,10 +61,10 @@ function SendMessage(){
             />
             </label>
             <br />
-            <label  className="message-area">
+            <label  >
 
-            <input
-            
+            <textarea
+                className="message-area"
                 type="text"
                 name="text"
                 value={text}
