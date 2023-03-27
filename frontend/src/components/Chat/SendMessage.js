@@ -47,23 +47,24 @@ function SendMessage(){
         
     return (
         <div className="send-message-container">
-        {/* <h2>Send Message</h2> */}
-        <form onSubmit={handleSubmit}>
-            <label>
-            {/* Receiver ID: */}
+
+        <form onSubmit={handleSubmit}  className="form">
+            <label className="message-status">
+
             <input
                 type="text"
                 name="receiver"
+                
                 value={status}
                 onChange={handleInputChange}
                 disabled
             />
             </label>
             <br />
-            <label>
-            {/* Message: */}
+            <label  className="message-area">
+
             <input
-                className="message-area"
+            
                 type="text"
                 name="text"
                 value={text}
