@@ -10,6 +10,7 @@ import axios from 'axios';
 
 const NavbarTwo=()=> {
   const [name, setName] = useState("")
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navigate = useNavigate();
 
   const goChat =()=>{
@@ -38,7 +39,10 @@ const NavbarTwo=()=> {
       headers: {Authorization: `Bearer ${localStorage.getItem('token')}`
     }})
     console.log(response.data)
-    
+  }
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
   }
   
 return (
@@ -46,15 +50,15 @@ return (
       <div>
         <NavLogo />
       </div>
-      <div className='search-bar'>
-        <input className='search-input' type="text" placeholder='SEARCH...' value={name} onChange={(e) => setName(e.target.value)} />
-        <div onClick={handleSearch}><SearchButton /></div>
-      </div>
-      <div className="navbar-end">
-        <div onClick={goChat}><MessageButton/></div>
-        <div onClick={handleLogout}><LogoutButton /></div>
-        
-      </div>
+        <div className='search-bar'>
+          <input className='search-input' type="text" placeholder='SEARCH...' value={name} onChange={(e) => setName(e.target.value)} />
+          <div onClick={handleSearch}><SearchButton /></div>
+        </div>
+        <div className="navbar-end">
+          <div onClick={goChat}><MessageButton/></div>
+          <div onClick={handleLogout}><LogoutButton /></div>
+        </div>
+
     </nav>
   );
 }

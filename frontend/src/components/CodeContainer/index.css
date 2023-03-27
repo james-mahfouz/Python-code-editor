@@ -8,6 +8,7 @@
 .left-editor{
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 .code-editor {
     border-radius: 5px;
@@ -34,6 +35,12 @@
     border-radius: 3px;
 }
 
+.title_input{
+    height: 40px;
+
+    border-radius: 10px;
+}
+
 @media screen and (max-width: 700px) {
     .code-container{
         flex-direction: column;
@@ -55,6 +62,7 @@
     .left-editor{
         flex-direction: column;
         margin-bottom: 50px;
+        align-items: flex-start;
     }
 
     .title_input{
