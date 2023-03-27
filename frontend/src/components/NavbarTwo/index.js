@@ -43,7 +43,6 @@ const NavbarTwo=()=> {
     {
       headers: {Authorization: `Bearer ${localStorage.getItem('token')}`
     }})
-    console.log(response.data.users)
     setSearched_name(response.data.users)
   }
 
