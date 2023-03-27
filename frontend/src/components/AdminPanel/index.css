@@ -1,0 +1,41 @@
+body{
+    background-color: var(--lightt-blue);
+}
+.table-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 5rem;
+    margin-top: 6rem;
+    margin-left: 18rem;
+    width: 45rem;
+}
+
+.table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table td,
+.table th {
+    border: 1px solid var(--blue);
+    padding: 8px;
+}
+
+.table th {
+    background-color: #0024FF;
+    color: white;
+}
+
+.table tr:nth-child(even) {
+    background-color: #FFF;
+}
+
+.table tr:hover {
+    background-color: #676767;
+    color: white;
+}
+.table td {
+    width: 80px;
+}
