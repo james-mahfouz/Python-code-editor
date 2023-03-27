@@ -7,25 +7,29 @@ function AllUsers() {
     const [selectedUser, setSelectedUser] = useState(null);
 
 
+    const token = {
+        headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
+    };
+
     useEffect(()=>{
-        const token = localStorage.getItem("token");
-        axios
-    .post("http://localhost:8000/api/v1/get_all_user", {
-        headers: {
-            Authorization: `Bearer ${token}`, 
-        },
-    })
-    .then((response) => {
-        setUsers(response.data.users);
-    })
-    .catch((error) => {
-        console.error(error);
-    });
-    }, []);
+        const fetchData = async () => {
+            try{
+                const response = await axios.post('http://localhost:8000/api/v1/get_all_user', token);
+                setUsers(response.data.users);
+
+            }catch (e) {
+                console.log(e);
+            }
+        }
+        fetchData();
+    },[]);
     
     const handleUserClick = (userId) => {
         setSelectedUser(userId);
         };
+
+
+        
     return(
         <div>
             <h2>Select Developer to Chat</h2>
