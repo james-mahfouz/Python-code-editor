@@ -2,6 +2,9 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  display: flex;
+  justify-content: space-evenly;
+  
 }
 /* main container */
 .all-users-container {
