@@ -3,6 +3,8 @@ import DownloadButton from "../../components/Buttons/DownloadButton";
 import CodeContainer from "../../components/CodeContainer";
 import NavbarTwo from "../../components/NavbarTwo";
 import Sidebar from "../../components/SideBar";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import './index.css'
 
 const LandingPage = () => {
@@ -14,7 +16,7 @@ const LandingPage = () => {
             <NavbarTwo/>
             <div className="landing-body">
                 <div className='sidebar'>
-                    <button onClick={toggleSidebar} className="toggle_button">Toggle Sidebar</button> 
+                    <button onClick={toggleSidebar} className="toggle_button"><FontAwesomeIcon icon={faArrowRight} /></button> 
                     <div>
                         {showSidebar && <Sidebar setSelectedCode={setSelectedCode}/>} 
                     </div>     
