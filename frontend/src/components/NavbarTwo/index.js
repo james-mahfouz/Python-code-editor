@@ -67,7 +67,7 @@ const NavbarTwo=()=> {
           <input className='search-input' type="text" placeholder='SEARCH...' value={name} onChange={(e) => setName(e.target.value)} />
             <div onClick={handleSearch}><SearchButton /></div>
             <div className='searched_name' ref={searchedNameRef}>
-            {searched_name && searched_name.map((name, index) => (
+              {searched_name && searched_name.map((name, index) => (
                 <div key={name.id} className="names_displayed">
                   <div onClick={goChat}> {index + 1}) { name.name }</div><br/>
                 </div>

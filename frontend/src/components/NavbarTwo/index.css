@@ -5,9 +5,12 @@
 .navbar-buttons{
     display: block;
 }
+.searched_name{
+    padding-left: 20px;
+}
 
 .names_displayed{
-    
+    cursor: pointer;
 }
 
 @media screen and (max-width:700px){  
