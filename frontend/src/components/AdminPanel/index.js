@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './index.css'
+import AdminLogo from '../../components/AdminLogo'
 
 function AdminPanel() {
   const [users, setUsers] = useState([]);
@@ -20,7 +21,9 @@ function AdminPanel() {
   }, []);
 
   return (
-    <div className='table-container'>
+    <div>
+        <div className='admin-logo'><AdminLogo/></div>
+        <div className='table-container'>
         <table className='table'>
       <thead>
         <tr>
@@ -40,6 +43,8 @@ function AdminPanel() {
       </tbody>
     </table>
     </div>
+    </div>
+    
     
   );
 }
