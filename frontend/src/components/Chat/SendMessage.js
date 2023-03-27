@@ -10,7 +10,7 @@ function SendMessage(){
     };
     const recieverId = localStorage.getItem("selectedUserId");
     const [receiver, setReceiver] = useState(recieverId);
-
+    
     
     const [text, setText] = useState("");
 
