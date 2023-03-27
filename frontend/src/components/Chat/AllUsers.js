@@ -43,8 +43,8 @@ function AllUsers() {
                 )))  : (
                     <div>Loading users...</div>
                     )}
-                    {selectedUser && 
-                    <div >Selected User ID: {selectedUser}</div>}
+                    {/* {selectedUser && 
+                    <div >Selected User: {selectedUser.name}</div>} */}
             
 
         </div>
