@@ -34,18 +34,7 @@
 <li>As an admin, I want to be able to display all users in the system so that I can monitor the activity and ensure that everyone is following the rules.</li>
 
 <h1 align="left">Color Palette:</h1><br>
-<img align="center" src="./frontend/public/color-pallete.png"><br><br>
-
-<h1 align="left">Mockups:</h1><br>
-
-| main page                             | Landing page                          | signup                              |
-| ------------------------------------- | ------------------------------------- | ------------------------------------- |
-| ![Image 1](./frontend/public/Mockups/mainpage.png) | ![Image 2](./frontend/public/Mockups/landingpage.png) | ![Image 3](./frontend/public/Mockups/signupPage.png) |
-
-| login                                 | Reset password                              | chat page page                             |
-| ------------------------------------- | ------------------------------------- | -------------------------------------- |
-| ![Image 1](./frontend/public/Mockups/loginpage.png) | ![Image 2](./frontend/public/Mockups/ressetPassword.png) | ![Image 3](./frontend/public/Mockups/chatpage.png) |
-
+<img align="center" src="../frontend/public/color-pallete.jpg"><br><br>
 
 
 <br>
