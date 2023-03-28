@@ -1,7 +1,7 @@
  <h1 align="center">Online Python Compiler</h1>
 <h3 align="center">An online python compiler that allows user to write their python codes and run them. It allows authenticated users to save and download their code as they can chat with other developers. In addition, the admin can display the users of the website.</h3>
 <h3 align="left">Languages and Tools:</h3>
-<p align="left"> <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Flogosear.ch%2Flogos%2Flaravel%2Findex.html&psig=AOvVaw010cgW-3p2Iusd5YouF9nV&ust=1680045224959000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCNihhqie_f0CFQAAAAAdAAAAABAI" alt="css3" width="40" height="40"/> </a> <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> <a href="https://www.mysql.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/> </a> <a href="https://www.php.net" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg" alt="php" width="40" height="40"/> </a> </p>
+<p align="left"> <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a> <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> <a href="https://www.mysql.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/> </a> <a href="https://www.php.net" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg" alt="php" width="40" height="40"/> </a> </p>
 
 - 👨‍💻 Authors: Hassan Bachir, James Mahfouz, Rima AbouChacra, Mariam Saleh
 
@@ -34,23 +34,20 @@
 <li>As an admin, I want to be able to display all users in the system so that I can monitor the activity and ensure that everyone is following the rules.</li>
 
 <h1 align="left">Color Palette:</h1><br>
-<img align="center" src="../frontend/public/color-pallete.jpg"><br><br>
+<img align="center" src="https://github.com/jamesmahfouz/Python-code-editor/blob/main/frontend/public/color-pallete.jpg"><br><br>
 
 
 <br>
 <h1 align="left">Implimentation:</h1><br>
 
-| Main page                            | Main page                            | Main page                            |
+| Signup page                          | Main page                            | landing page                            |
 | ------------------------------------ | ------------------------------------ | ------------------------------------ |
-| ![Image 1](./images/implement/1.png) | ![Image 2](./images/implement/2.png) | ![Image 3](./images/implement/3.png) |
+| ![Image 1](https://github.com/jamesmahfouz/Python-code-editor/blob/main/frontend/public/6.png) | ![Image 2](https://github.com/jamesmahfouz/Python-code-editor/blob/main/frontend/public/3.png) | ![Image 3](https://github.com/jamesmahfouz/Python-code-editor/blob/main/frontend/public/2.png) |
 
-| necklaces                            | sigup                                | login                                |
+| landing                           | messages page                               | login page                                |
 | ------------------------------------ | ------------------------------------ | ------------------------------------ |
-| ![Image 1](./images/implement/4.png) | ![Image 2](./images/implement/5.png) | ![Image 3](./images/implement/6.png) |
+| ![Image 1](https://github.com/jamesmahfouz/Python-code-editor/blob/main/frontend/public/5.png) | ![Image 2](https://github.com/jamesmahfouz/Python-code-editor/blob/main/frontend/public/4.png) | ![Image 3](https://github.com/jamesmahfouz/Python-code-editor/blob/main/frontend/public/1.png) |
 
-| cart                                 | admin panel                          | Earings                              |
-| ------------------------------------ | ------------------------------------ | ------------------------------------ |
-| ![Image 1](./images/implement/7.png) | ![Image 2](./images/implement/8.png) | ![Image 3](./images/implement/9.png) |
 
 <br><h1 align="left">Prerequisites:</h1>
 <ul>
