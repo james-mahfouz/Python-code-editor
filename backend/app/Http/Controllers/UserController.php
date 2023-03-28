@@ -104,4 +104,5 @@ class UserController extends Controller
             'data' => $codes
         ]);
     }
+
 }

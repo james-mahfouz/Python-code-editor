@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import {useNavigate} from "react-router-dom"
 import axios from 'axios';
 import './index.css'
 import AdminLogo from '../../components/AdminLogo'
@@ -19,6 +20,7 @@ function AdminPanel() {
         console.log(error);
       });
   }, []);
+   const navigate = useNavigate()
 
   return (
     <div>
@@ -44,7 +46,7 @@ function AdminPanel() {
           ))
         ) : (
           <tr>
-            <td colSpan="3">You are not the admin.</td>
+            <td colSpan="3">{navigate("/landing")}</td>
           </tr>
         )}
       </tbody>

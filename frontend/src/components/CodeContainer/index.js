@@ -61,8 +61,11 @@ const CodeContainer=({selectedCode})=>{
       } else{
         const data = new FormData()
         data.append('code', code)
-        data.append('title', code_title) 
-        await axios.post('http://localhost:8000/api/v1/save_code', data, token);
+        data.append('title', code_title)
+        console.log(code, code_title) 
+        const response = await axios.post('http://localhost:8000/api/v1/save_code', data, token);
+        console.log(response)
+
       }
     }
     
