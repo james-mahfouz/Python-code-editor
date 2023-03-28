@@ -43,9 +43,14 @@ class UserController extends Controller
     }
     public function get_all_users()
     {
-        $users = User::select()->get();
+        $user = Auth::user();
+
+        $users = User::select()->where('id', '!=', $user->id)->get();
         return response()->json([
             'users' => $users
+        ]);
+        return response() -> json([
+            'message' => "you are not the admin"
         ]);
     }
     public function get_developers(Request $request)
