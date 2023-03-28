@@ -34,11 +34,11 @@ function SendMessage(){
             }
             );
             setStatus('Message sent successfully!')
-            alert("Message sent successfully!");
+
         } catch (error) {
             console.log(error);
             setStatus('Message not sent.')
-            alert("Message not sent.");
+
         }
         };
         
