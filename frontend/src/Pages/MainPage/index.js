@@ -5,8 +5,8 @@ import Navbar from "../../components/Navbar";
 const MainPage = () => {
     return(
         <div>
-           <Navbar/>
-           <CodeContainer/>
+            <Navbar/>
+            <CodeContainer/>
         </div>
     )
 }

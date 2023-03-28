@@ -9,7 +9,7 @@
   justify-content: center;
   align-items: stretch;
   flex-wrap: wrap;
-  padding-top: 90px;
+  padding-top: 130px;
 
 }
 
@@ -118,7 +118,7 @@
   color: grey;
 
 }
-
+/* INBOX STYLING */
 .inbox-container {
   margin-left: 10px;
   margin-right: 10px;
@@ -136,4 +136,25 @@
   background-color:#0024FF;
   text-align: center;
   width: 220px;
+}
+
+.back-button {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  height: 50px;
+  width: 90px;
+  color: white;
+  background-color: #0024FF;
+  border-radius: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.back-button:hover{
+  background-color: #4a62ff;
+}
+.back-button:active{
+  background-color: #7c8eff;
+  color: grey;
 }
