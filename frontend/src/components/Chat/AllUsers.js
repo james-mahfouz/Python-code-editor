@@ -27,8 +27,8 @@ function AllUsers() {
         fetchData();
     },[]);
     
-    const handleUserClick = (userId) => {
-        setSelectedUser(userId);
+    const handleUserClick = (userName) => {
+        setSelectedUser(userName);
         };
 
 
@@ -41,7 +41,7 @@ function AllUsers() {
             <h2>Select Developer to Message</h2>
             {
                 users.length > 0 ? ( users.map((user) => (
-                    <div key={user.id} onClick={() => handleUserClick(user.id)} ><img className="icon" src={pngegg}></img> {user.name} </div>
+                    <div key={user.id} onClick={() => handleUserClick(user.name)} ><img className="icon" src={pngegg}></img> {user.name} </div>
                         )))  : (
                     <div>Loading users...</div>
             )}
