@@ -5,9 +5,7 @@ import './index.css';
 
 
 function SendMessage(){
-    const token ={
-        headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }
-    };
+
     const recieverId = localStorage.getItem("selectedUserId");
     const [receiver, setReceiver] = useState(recieverId);
     const[status,setStatus]=useState('')
@@ -31,7 +29,9 @@ function SendMessage(){
             await axios.post(
             `http://localhost:8000/api/v1/chats/${receiver}`,
             data,
-            token
+            {
+                headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }
+            }
             );
             setStatus('Message sent successfully!')
             alert("Message sent successfully!");
