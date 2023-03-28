@@ -34,7 +34,7 @@
 <li>As an admin, I want to be able to display all users in the system so that I can monitor the activity and ensure that everyone is following the rules.</li>
 
 <h1 align="left">Color Palette:</h1><br>
-<img align="center" src="./frontend/public/color-pallete.png"><br><br>
+<img align="center" src="./frontend/public/color-pallete.jpg"><br><br>
 
 <h1 align="left">Mockups:</h1><br>
 
