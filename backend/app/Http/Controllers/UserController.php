@@ -55,8 +55,11 @@ class UserController extends Controller
     }
     public function get_developers(Request $request)
     {   
+        $user = Auth::user();
         $name = $request->name;
-        $users = User::where('name', 'like', '%'.$name.'%')->get();
+        $users = User::where('name', 'like', '%'.$name.'%')
+                    ->where('id', '!=', $user->id)
+                    ->get();
         return response()->json([
             'users' => $users
         ]);
